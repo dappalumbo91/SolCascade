@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Thermodynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: thermoelectric
+name: Thermoelectric generator
+category: mainstream
+governing_equation: Seebeck current from a temperature difference. Device efficiency
+  is a fraction of Carnot set by the figure of merit ZT.
+governing_source: https://doi.org/10.1038/nmat2090
+efficiency_ceiling: 0.2
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: https://doi.org/10.1038/nmat2090
+demonstrated_efficiency: 0.08
+demonstrated_year: 2020
+demonstrated_source: https://doi.org/10.1038/nmat2090
+energy_density_j: 315576000000.0
+energy_density_basis: J/m2 of heat crossing the module in one year at 10 kW/m2
+reference_unit: 1 m2 of module, one year, 10 kW/m2 heat flux
+power_density_w: 800.0
+power_density_basis: W/m2 electric at 0.08 of a 10 kW/m2 heat flux
+input_energy_j: 0.0
+input_energy_basis: No auxiliary electrical drive. The heat flux is the energy density.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 8
+engineering_barrier: ZT and heat-sink engineering. The module makes no heat of its
+  own.
+notes: Snyder and Toberer, Nature Materials 7, 105 (2008), DOI 10.1038/nmat2090, is
+  the materials review. The 8% device figure and the 10 kW/m2 flux are catalog estimates,
+  not that paper's record cell. Output/input is left undefined because the electrical
+  input is zero.
+sources:
+- https://doi.org/10.1038/nmat2090

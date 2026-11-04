@@ -1,0 +1,119 @@
+# Representative engineering properties for a runnable example.
+# They are inputs. Replace them in this file or through a scalar provider.
+# One-group removal coefficients are not ENDF data. OpenMC uses a real
+# library when OPENMC_CROSS_SECTIONS is set.
+# A zero Young's modulus marks a liquid: it carries heat and neutrons,
+# and it carries no elastic stress.
+
+tungsten:
+  note: "Representative room-temperature tungsten for a thin first wall."
+  density_kg_m3: 19300.0
+  thermal_conductivity_W_mK: 173.0
+  specific_heat_J_kgK: 132.0
+  youngs_modulus_Pa: 4.0e11
+  poissons_ratio: 0.28
+  thermal_expansion_per_K: 4.5e-6
+  yield_strength_Pa: 7.5e8
+  composition:
+    - {element: W, weight_fraction: 1.0}
+  one_group:
+    macroscopic_total_per_m: 32.0
+    kerma_fraction: 0.50
+
+lithium_lead:
+  note: "Li17Pb83-like liquid. Weight fractions are from 17/83 atom fractions."
+  density_kg_m3: 9400.0
+  thermal_conductivity_W_mK: 15.0
+  specific_heat_J_kgK: 190.0
+  youngs_modulus_Pa: 0.0
+  poissons_ratio: 0.0
+  thermal_expansion_per_K: 0.0
+  yield_strength_Pa: 0.0
+  composition:
+    - {element: Li, weight_fraction: 0.00681}
+    - {element: Pb, weight_fraction: 0.99319}
+  one_group:
+    macroscopic_total_per_m: 16.0
+    kerma_fraction: 0.40
+    # ENDF/B-VIII.0 at 14.1 MeV and 294 K. Li-6 is 0.0759 of the lithium
+    # atoms. MT105 on Li-6 and MT205 on Li-7, divided by the existing
+    # one-group total of 16 /m. This fraction does not change kerma.
+    tritium_fraction: 0.009718410884467291
+
+steel_316:
+  note: "Representative 316 stainless properties, not a qualified heat."
+  density_kg_m3: 8000.0
+  thermal_conductivity_W_mK: 16.0
+  specific_heat_J_kgK: 500.0
+  youngs_modulus_Pa: 1.93e11
+  poissons_ratio: 0.30
+  thermal_expansion_per_K: 1.6e-5
+  yield_strength_Pa: 1.7e8
+  composition:
+    - {element: Fe, weight_fraction: 0.70}
+    - {element: Cr, weight_fraction: 0.17}
+    - {element: Ni, weight_fraction: 0.13}
+  one_group:
+    macroscopic_total_per_m: 20.0
+    kerma_fraction: 0.45
+
+copper:
+  note: "Room-temperature copper conductor. Resistivity is linear in temperature."
+  density_kg_m3: 8960.0
+  thermal_conductivity_W_mK: 401.0
+  specific_heat_J_kgK: 385.0
+  youngs_modulus_Pa: 1.1e11
+  poissons_ratio: 0.34
+  thermal_expansion_per_K: 1.7e-5
+  yield_strength_Pa: 7.0e7
+  resistivity_ohm_m: 1.68e-8
+  resistivity_temperature_coeff_per_K: 0.00393
+  resistivity_reference_K: 293.15
+  composition:
+    - {element: Cu, weight_fraction: 1.0}
+
+uranium_238:
+  note: >
+    ENDF/B-VIII.0 point values at 14.1 MeV and 294 K, not a flux-weighted
+    spectrum and not a fission cascade. Total 5.8693697 b, fission 1.15854 b,
+    capture 0.00080741222 b, at 19050 kg/m3. Kerma is 0 because no kerma
+    factor was sampled. Fission heat is the 200 MeV ledger quantum, not this
+    cross section. Thermal and elastic numbers are representative metal
+    properties, not a qualified heat. Enrichment below 1 dilutes this
+    nuclide with Pb-208 in the hybrid module.
+  density_kg_m3: 19050.0
+  thermal_conductivity_W_mK: 27.0
+  specific_heat_J_kgK: 116.0
+  youngs_modulus_Pa: 2.08e11
+  poissons_ratio: 0.23
+  thermal_expansion_per_K: 1.39e-5
+  yield_strength_Pa: 2.0e8
+  composition:
+    - {nuclide: U238, weight_fraction: 1.0}
+  one_group:
+    macroscopic_total_per_m: 28.28575167628848
+    kerma_fraction: 0.0
+    fission_fraction: 0.19738746393841913
+    capture_fraction: 0.00013756370126080146
+
+thorium_232:
+  note: >
+    ENDF/B-VIII.0 point values at 14.1 MeV and 294 K, not a flux-weighted
+    spectrum and not a fission cascade. Total 5.8219228 b, fission 0.360686 b,
+    capture 0.00115355 b, at 11720 kg/m3. Kerma is 0 because no kerma factor
+    was sampled. Fission heat is the 200 MeV ledger quantum. Thermal and
+    elastic numbers are representative metal properties, not a qualified heat.
+  density_kg_m3: 11720.0
+  thermal_conductivity_W_mK: 54.0
+  specific_heat_J_kgK: 118.0
+  youngs_modulus_Pa: 7.9e10
+  poissons_ratio: 0.27
+  thermal_expansion_per_K: 1.1e-5
+  yield_strength_Pa: 1.4e8
+  composition:
+    - {nuclide: Th232, weight_fraction: 1.0}
+  one_group:
+    macroscopic_total_per_m: 17.708661616192792
+    kerma_fraction: 0.0
+    fission_fraction: 0.061953071586589914
+    capture_fraction: 0.00019813900658387291

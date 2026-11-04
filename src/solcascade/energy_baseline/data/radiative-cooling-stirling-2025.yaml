@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Thermodynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: 2025 Sci. Adv. result. Mechanical power from ambient radiation to the sky. Not
+  electricity, and not a vacuum-energy claim. The paper also states a potential above
+  6 W/m2 that is not used as the scored power.
+replication_status: single_experiment
+figure_status: measured
+id: radiative-cooling-stirling-2025
+name: Radiative-cooling Stirling engine
+category: cutting_edge
+governing_equation: A surface radiating to the sky runs below ambient air temperature.
+  A Stirling engine takes work from that difference.
+governing_source: https://doi.org/10.1126/sciadv.adw6833
+efficiency_ceiling: 0.05
+efficiency_ceiling_kind: carnot
+efficiency_ceiling_source: A 10 K difference around 290 K has a Carnot bound near
+  0.03. 0.05 is a round bound for the reported >10 K cases.
+demonstrated_efficiency: 1.0
+demonstrated_year: 2025
+demonstrated_source: https://doi.org/10.1126/sciadv.adw6833
+energy_density_j: 12623040.0
+energy_density_basis: J/m2/year of mechanical work at 0.40 W/m2
+reference_unit: 1 m2 of radiator, one year, at the reported >400 mW/m2
+power_density_w: 0.4
+power_density_basis: W/m2 mechanical, the paper's >400 mW/m2 outdoor result
+input_energy_j: 0.0
+input_energy_basis: Passive radiative heat rejection. No electrical drive is in the
+  reported engine.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: Mechanical watts per square meter are below 1. The sky is the
+  external sink.
+notes: Deppe and Li et al., Science Advances 11, eadw6833 (2025), DOI 10.1126/sciadv.adw6833.
+  Scored power is 0.40 W/m2 mechanical. Claimed device watts are blank because the
+  paper reports a flux, not one machine's total watts.
+sources:
+- https://doi.org/10.1126/sciadv.adw6833

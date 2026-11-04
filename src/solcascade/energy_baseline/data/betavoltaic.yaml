@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: betavoltaic
+name: Betavoltaic cell
+category: mainstream
+governing_equation: Beta particles from a radioisotope create electron-hole pairs
+  in a semiconductor junction.
+governing_source: https://doi.org/10.1016/j.apenergy.2014.04.029
+efficiency_ceiling: 0.2
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Pair-creation energy versus beta energy sets a bound well
+  below 1. 0.20 is a generous device ceiling.
+demonstrated_efficiency: 0.05
+demonstrated_year: 2014
+demonstrated_source: https://doi.org/10.1016/j.apenergy.2014.04.029
+energy_density_j: null
+energy_density_basis: Isotope inventory energy was not calculated in this row
+reference_unit: one small betavoltaic cell
+power_density_w: 1.0e-06
+power_density_basis: W, order of a microwatt cell
+input_energy_j: null
+input_energy_basis: Isotope separation and device fabrication energy were not given
+  a joule figure
+chain_reaction: false
+self_sustaining: true
+continuous_external_drive: false
+trl: 7
+engineering_barrier: Activity, shielding, and a power level that stays in the microwatts.
+notes: Commercial cells exist at microwatt scale. The efficiency and the watt figure
+  are orders, not a named datasheet line. Decay continues without an external electrical
+  drive.
+sources:
+- https://doi.org/10.1016/j.apenergy.2014.04.029

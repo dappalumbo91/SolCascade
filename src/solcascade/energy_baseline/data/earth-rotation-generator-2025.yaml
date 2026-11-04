@@ -1,0 +1,47 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Electromagnetism)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Chyba, Hand, and Chyba, Phys. Rev. Research 7, 013285 (2025), arXiv:2503.15790.
+  The paper reports a continuous DC voltage and current of the predicted low magnitude.
+  A secondary account states 18 microvolts. Watts were not copied. Nature news DOI
+  10.1038/d41586-025-00847-0 records the dispute. Not independently replicated in
+  this catalog.
+replication_status: disputed
+figure_status: measured
+id: earth-rotation-generator-2025
+name: Earth-rotation magnetic generator claim
+category: fringe
+governing_equation: The claim is a voltage on a low-magnetic-Reynolds-number ferrite
+  shell as Earth rotates through its own magnetic field. A standard argument says
+  a co-rotating conductor cannot harvest that axisymmetric field.
+governing_source: https://doi.org/10.1103/PhysRevResearch.7.013285
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: The paper predicts a small voltage. It does not give a
+  plant ceiling.
+demonstrated_efficiency: null
+demonstrated_year: 2025
+demonstrated_source: https://doi.org/10.1103/PhysRevResearch.7.013285
+energy_density_j: null
+energy_density_basis: Joules were not copied. A secondary account mentions 18 microvolts.
+reference_unit: one MnZn ferrite cylindrical shell in the 2025 experiment
+power_density_w: null
+power_density_basis: Not stated as a power density in the sources read for this row
+input_energy_j: null
+input_energy_basis: Instrument and temperature-control loads were not given a joule
+  figure
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: The reported voltage is tiny, and the effect is disputed.
+notes: Included because it is a 2025 peer-reviewed non-chemical, non-nuclear electrical
+  claim. The rank leaves joules blank on purpose.
+sources:
+- https://doi.org/10.1103/PhysRevResearch.7.013285
+- https://arxiv.org/abs/2503.15790
+- https://doi.org/10.1038/d41586-025-00847-0

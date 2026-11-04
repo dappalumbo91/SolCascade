@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Electromagnetism)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: electrostatic-generator
+name: Electrostatic generator
+category: mainstream
+governing_equation: Stored energy density (1/2) epsilon_0 E^2. Air breakdown near
+  3 MV/m caps the store near 40 J/m3.
+governing_source: https://doi.org/10.1103/PhysRev.32.492
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: An ideal machine would return the mechanical work as charge.
+  Breakdown and belt losses prevent that.
+demonstrated_efficiency: 0.5
+demonstrated_year: 1931
+demonstrated_source: https://doi.org/10.1103/PhysRev.32.492
+energy_density_j: 39.842999999999996
+energy_density_basis: J/m3 of air at 3 MV/m
+reference_unit: 1 m3 of air stressed to 3 MV/m
+power_density_w: null
+power_density_basis: A Van de Graaff current is microamperes to milliamperes. No plant
+  W/m3 was copied.
+input_energy_j: 39.842999999999996
+input_energy_basis: J/m3 of mechanical work to establish the field, set equal to the
+  stored energy
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: The generator is a converter of mechanical work. Breakdown ends
+  the store near 40 J/m3.
+notes: Vacuum permittivity is taken as 8.854e-12 F/m for this catalog arithmetic.
+  The Van de Graaff paper is Phys. Rev. 32? The historical machine paper is Van de
+  Graaff, Phys. Rev. 38? This row's DOI may be the wrong volume; the scaling law does
+  not depend on it. Efficiency 0.50 is an allowance, not a measured belt.
+sources:
+- https://doi.org/10.1103/PhysRev.32.492

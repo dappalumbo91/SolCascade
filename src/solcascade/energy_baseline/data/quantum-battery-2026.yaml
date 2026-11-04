@@ -1,0 +1,40 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Quantum_Mechanics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Theory only. Phys. Rev. A 114, 042219 (2026), DOI 10.1103/j4sc-3s2k. No watts
+  were measured. Recorded so a 2026 quantum-energy claim is not dropped for being
+  small.
+replication_status: unreplicated
+figure_status: estimate
+id: quantum-battery-2026
+name: Nonreciprocal quantum battery model
+category: fringe
+governing_equation: A 2026 theory paper assigns work and ergotropy to a model of a
+  light-harvesting ring coupled to a cavity. There is no device.
+governing_source: https://doi.org/10.1103/j4sc-3s2k
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: The paper is a model. It does not state a laboratory ceiling.
+demonstrated_efficiency: null
+demonstrated_year: 2026
+demonstrated_source: https://doi.org/10.1103/j4sc-3s2k
+energy_density_j: null
+energy_density_basis: No device energy
+reference_unit: no device; one theoretical ring
+power_density_w: null
+power_density_basis: No measured watts
+input_energy_j: null
+input_energy_basis: No laboratory input
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 1
+engineering_barrier: The paper is a calculation. Nothing was built.
+notes: Included because the prompt asks for 2024-2026 claims of non-chemical, non-nuclear
+  energy. This one is a model of a quantum battery, not an experiment.
+sources:
+- https://doi.org/10.1103/j4sc-3s2k

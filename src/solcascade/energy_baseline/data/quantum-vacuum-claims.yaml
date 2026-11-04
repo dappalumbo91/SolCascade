@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Quantum_Mechanics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Recorded as a claim class. No peer-reviewed net-watt device is entered on this
+  row.
+replication_status: unreplicated
+figure_status: estimate
+id: quantum-vacuum-claims
+name: Quantum-vacuum energy claims
+category: fringe
+governing_equation: The vacuum energy density of quantum field theory is huge, and
+  cosmological measurements of that density are tiny. No accepted device bridges the
+  two.
+governing_source: https://doi.org/10.1103/RevModPhys.61.1
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Weinberg, Rev. Mod. Phys. 61, 1 (1989), states the cosmological-constant
+  problem. It does not offer a generator.
+demonstrated_efficiency: null
+demonstrated_year: 1989
+demonstrated_source: https://doi.org/10.1103/RevModPhys.61.1
+energy_density_j: null
+energy_density_basis: No accepted extraction energy density
+reference_unit: no device
+power_density_w: null
+power_density_basis: No accepted watts
+input_energy_j: null
+input_energy_basis: Claims that omit the drive are not given a joule credit
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 1
+engineering_barrier: There is no demonstrated coupling that yields net work.
+notes: This row is the claim class, not a single machine. The cosmological-constant
+  review is the physics constraint, not an endorsement of an extractor.
+sources:
+- https://doi.org/10.1103/RevModPhys.61.1

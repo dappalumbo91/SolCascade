@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Chemistry)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: chemical-combustion
+name: Chemical combustion
+category: mainstream
+governing_equation: Enthalpy of oxidation. For methane, CH4 + 2 O2 -> CO2 + 2 H2O,
+  higher heating value about 55.5 MJ/kg.
+governing_source: https://www.engineeringtoolbox.com/fuels-higher-calorific-values-d_169.html
+efficiency_ceiling: 0.82
+efficiency_ceiling_kind: carnot
+efficiency_ceiling_source: 1 - 300/1700 for a 1700 K flame rejected at 300 K. A simple
+  bound, not a turbine map.
+demonstrated_efficiency: 0.64
+demonstrated_year: 2023
+demonstrated_source: https://www.ge.com/gas-power/products/gas-turbines/9ha
+energy_density_j: 55500000.0
+energy_density_basis: J/kg methane, higher heating value
+reference_unit: 1 kg methane
+power_density_w: null
+power_density_basis: A combined-cycle block is sized by the turbine, not by a universal
+  W/m3
+input_energy_j: 1000.0
+input_energy_basis: J, order of an ignition spark for 1 kg. The fuel enthalpy is the
+  energy density, not this input.
+chain_reaction: true
+self_sustaining: true
+continuous_external_drive: false
+trl: 9
+engineering_barrier: The flame is self-sustaining while fuel and air are supplied.
+  The carbon dioxide is the constraint, not ignition.
+notes: 0.64 is a manufacturer figure for a large combined-cycle class, not a laboratory
+  calorimeter. The chemical chain is radical chemistry, not a nuclear chain. Ignition
+  at 1000 J is an order-of-magnitude allowance.
+sources:
+- https://www.engineeringtoolbox.com/fuels-higher-calorific-values-d_169.html
+- https://www.ge.com/gas-power/products/gas-turbines/9ha

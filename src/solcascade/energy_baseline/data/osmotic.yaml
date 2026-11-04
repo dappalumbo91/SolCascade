@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Oceanography)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: single_experiment
+figure_status: estimate
+id: osmotic
+name: Osmotic salinity-gradient power
+category: mainstream
+governing_equation: Gibbs free energy of mixing fresh water into seawater is near
+  0.7 to 0.8 kWh per cubic meter of river water.
+governing_source: https://doi.org/10.1016/j.memsci.2008.11.018
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: The mixing free energy is the ceiling. A real membrane
+  returns less.
+demonstrated_efficiency: null
+demonstrated_year: 2009
+demonstrated_source: https://doi.org/10.1016/j.memsci.2008.11.018
+energy_density_j: 2700000.0
+energy_density_basis: J per cubic meter of river water, 0.75 kWh, the mixing resource
+reference_unit: 1 m3 of river water mixed into the sea
+power_density_w: null
+power_density_basis: Prototype membranes reported watts per square meter of membrane.
+  A plant figure was not copied.
+input_energy_j: null
+input_energy_basis: Pretreatment pumping was a large fraction of prototype output
+  and was not given a single joule figure
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 5
+engineering_barrier: Membrane fouling and pump power. The Statkraft prototype was
+  shut down.
+notes: 0.75 kWh/m3 is the resource, so demonstrated electrical efficiency is left
+  blank rather than implied. The DOI is a pressure-retarded-osmosis membrane paper.
+sources:
+- https://doi.org/10.1016/j.memsci.2008.11.018

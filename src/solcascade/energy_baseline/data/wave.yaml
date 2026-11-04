@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Oceanography)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: single_experiment
+figure_status: estimate
+id: wave
+name: Wave energy converter
+category: mainstream
+governing_equation: Incident power per meter of wavefront is set by the sea state.
+  A device takes a capture width times an absorption efficiency.
+governing_source: https://doi.org/10.1016/j.rser.2016.05.030
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Point absorbers have theoretical capture widths above their
+  physical width. 1.0 of the incident flux is used here as a simple ceiling.
+demonstrated_efficiency: 0.05
+demonstrated_year: 2016
+demonstrated_source: https://doi.org/10.1016/j.rser.2016.05.030
+energy_density_j: 946728000000.0
+energy_density_basis: J per meter of wavefront per year at 30 kW/m incident
+reference_unit: 1 m of wavefront, one year, 30 kW/m
+power_density_w: 30000.0
+power_density_basis: W per meter of wavefront, the incident resource, not the device
+  output
+input_energy_j: null
+input_energy_basis: Mooring and manufacture energy were not given a joule figure
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 6
+engineering_barrier: Survivability in storms. Prototypes have produced power. A fleet
+  has not.
+notes: 30 kW/m and a 5% absorption are catalog orders so a delivered-joule figure
+  exists. The review DOI anchors the literature. Device output in the rank is 5% of
+  the incident energy.
+sources:
+- https://doi.org/10.1016/j.rser.2016.05.030

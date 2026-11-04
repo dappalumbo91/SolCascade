@@ -1,0 +1,14 @@
+name: solcascade
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy>=2
+  - scipy>=1.11
+  - pyyaml>=6
+  - pytest>=8
+  - pip
+  # Optional, Linux or macOS, after the environment exists:
+  # - openmc
+  # Nuclear data is a separate public download. See the README.
+  # MOOSE, Cardinal, Griffin, Bison, and TokaMaker are built from source.

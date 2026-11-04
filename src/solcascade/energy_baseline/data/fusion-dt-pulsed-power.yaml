@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: fusion-dt-pulsed-power
+name: Pulsed-power DT fusion
+category: mainstream
+governing_equation: A pulsed current compresses a magnetized plasma (MagLIF and related
+  Z-pinch schemes). The store is the capacitor bank.
+governing_source: https://doi.org/10.1063/1.3333505
+efficiency_ceiling: 0.4
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: Same thermal-plant ceiling as other DT concepts, if a repeating
+  target ever drove one.
+demonstrated_efficiency: null
+demonstrated_year: 2023
+demonstrated_source: https://doi.org/10.1063/1.3333505
+energy_density_j: null
+energy_density_basis: No single published yield was copied. Driver stores are megajoules
+  and reported fusion yields have stayed far below that store.
+reference_unit: one pulsed-power shot on a Z-class driver
+power_density_w: null
+power_density_basis: Not a steady plant
+input_energy_j: 20000000.0
+input_energy_basis: J, order of the Sandia Z electrical store, a round 20 MJ figure
+  used as the driver scale
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 3
+engineering_barrier: Each shot must be driven. Fusion output has not matched the stored
+  electrical energy.
+notes: Slutz et al., Phys. Plasmas 17, 056303 (2010) is the MagLIF proposal. The 20
+  MJ driver scale is a round facility figure. A joule yield is left blank rather than
+  guessed.
+sources:
+- https://doi.org/10.1063/1.3333505

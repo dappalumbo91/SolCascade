@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: rtg
+name: Radioisotope thermoelectric generator
+category: mainstream
+governing_equation: Pu-238 alpha decay heat, converted by a thermoelectric couple.
+  Specific thermal power is near 0.54 W/g.
+governing_source: https://rps.nasa.gov/power-sources/mmrtg/
+efficiency_ceiling: 0.2
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: The thermoelectric ceiling in the thermoelectric row. Flight
+  units are well below it.
+demonstrated_efficiency: 0.06
+demonstrated_year: 2011
+demonstrated_source: https://rps.nasa.gov/power-sources/mmrtg/
+energy_density_j: 2156115255205.6057
+energy_density_basis: J/kg of Pu-238 over one mean life, at 0.54 W/g thermal and an
+  87.7 year half-life
+reference_unit: 1 kg Pu-238, integrated over one mean life
+power_density_w: 2.4
+power_density_basis: W/kg electric for an MMRTG-class system, about 110 W in about
+  45 kg
+input_energy_j: null
+input_energy_basis: Reactor production of Pu-238 is a large energy cost and was not
+  assigned a joule figure
+chain_reaction: false
+self_sustaining: true
+continuous_external_drive: false
+trl: 9
+engineering_barrier: Isotope supply. The decay itself needs no drive.
+notes: NASA MMRTG pages give about 110 W electric at beginning of life. The 0.06 efficiency
+  is 110 W over a roughly 2 kW thermal source. The integrated joules use 0.54 W/g
+  and 87.7 years. Mean life uses ln(2) approximately 0.693147.
+sources:
+- https://rps.nasa.gov/power-sources/mmrtg/

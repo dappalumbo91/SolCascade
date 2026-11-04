@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Thermodynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: 2026 materials result. Power density 48.6 W/m3 is the reported optimum. It harvests
+  a temperature difference. No net-energy-from-vacuum claim is in the abstract that
+  was read.
+replication_status: single_experiment
+figure_status: measured
+id: thermoelectric-ionogel-2026
+name: Ionogel mixed thermoelectric generator
+category: cutting_edge
+governing_equation: A mixed ion and electron thermopower in a carbon-nanotube ionogel.
+  The 2026 paper reports a volumetric power for a laboratory couple.
+governing_source: https://doi.org/10.1007/s44562-026-00013-6
+efficiency_ceiling: 0.2
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: https://doi.org/10.1038/nmat2090
+demonstrated_efficiency: null
+demonstrated_year: 2026
+demonstrated_source: https://doi.org/10.1007/s44562-026-00013-6
+energy_density_j: null
+energy_density_basis: The paper reports W/m3, not a joule inventory
+reference_unit: 1 m3 of the reported ionogel generator at the stated optimum
+power_density_w: 48.6
+power_density_basis: W/m3, the paper's optimum at 0.10 wt% single-wall nanotube loading
+input_energy_j: null
+input_energy_basis: The heat current is external. Its joules were not copied.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 3
+engineering_barrier: 48.6 W per cubic meter in a laboratory sample. Not a plant, and
+  not a new force.
+notes: Wang et al., Thermal Functional Materials 1, 9 (2026), DOI 10.1007/s44562-026-00013-6.
+  Efficiency is blank, so the rank does not turn 48.6 W/m3 into a joule score.
+sources:
+- https://doi.org/10.1007/s44562-026-00013-6

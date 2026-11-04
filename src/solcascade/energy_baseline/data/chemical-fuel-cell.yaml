@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Chemistry)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: chemical-fuel-cell
+name: Hydrogen fuel cell
+category: mainstream
+governing_equation: H2 + 1/2 O2 -> H2O. Lower heating value is about 120 MJ/kg of
+  hydrogen. A PEM cell takes a fraction of that as electricity.
+governing_source: https://www.energy.gov/eere/fuelcells/hydrogen-storage
+efficiency_ceiling: 0.83
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: The thermal voltage of the hydrogen-oxygen cell is below
+  the higher-heating-value voltage. 0.83 is the familiar LHV-versus-HHV bound, not
+  a stack measurement.
+demonstrated_efficiency: 0.6
+demonstrated_year: 2020
+demonstrated_source: https://www.energy.gov/eere/fuelcells/articles/fuel-cells-fact-sheet
+energy_density_j: 120000000.0
+energy_density_basis: J/kg hydrogen, lower heating value
+reference_unit: 1 kg hydrogen
+power_density_w: 10000.0
+power_density_basis: W/m2 of stack active area is device-specific. 10 kW/m2 is a round
+  PEM order, estimate
+input_energy_j: 180000000.0
+input_energy_basis: J to make 1 kg of hydrogen by electrolysis at about 50 kWh/kg
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 8
+engineering_barrier: The cell is efficient. Making the hydrogen costs more electricity
+  than the cell returns.
+notes: 50 kWh/kg is 1.80e8 J/kg. At 0.60 of the 120 MJ/kg lower heating value the
+  cell returns 7.2e7 J, so output/input is 0.40. The stack does not run without a
+  hydrogen feed.
+sources:
+- https://www.energy.gov/eere/fuelcells/hydrogen-storage
+- https://www.energy.gov/eere/fuelcells/articles/fuel-cells-fact-sheet

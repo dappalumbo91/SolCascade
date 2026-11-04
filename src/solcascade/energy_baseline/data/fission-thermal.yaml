@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: fission-thermal
+name: Thermal-reactor fission
+category: mainstream
+governing_equation: About 200 MeV of recoverable energy per U-235 fission, times a
+  multiplying chain while k_eff is held at 1.
+governing_source: https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy
+efficiency_ceiling: 0.45
+efficiency_ceiling_kind: carnot
+efficiency_ceiling_source: A steam cycle near 560 K rejected near 310 K has a Carnot
+  bound near 0.45. The number is that bound, not a measured turbine.
+demonstrated_efficiency: 0.33
+demonstrated_year: 2020
+demonstrated_source: https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/nuclear-power-reactors
+energy_density_j: 82099804396887.4
+energy_density_basis: J/kg of U-235 if every nucleus fissions at 200 MeV
+reference_unit: 1 kg U-235, complete fission
+power_density_w: 100000000.0
+power_density_basis: W/m3, representative pressurized-water core, about 100 W/cm3
+input_energy_j: 36000000000.0
+input_energy_basis: J of centrifuge electricity for about 200 SWU at 50 kWh/SWU, an
+  estimate for 1 kg of highly enriched uranium
+chain_reaction: true
+self_sustaining: true
+continuous_external_drive: false
+trl: 9
+engineering_barrier: Fuel fabrication, waste, and licensing. The chain itself sustains
+  once critical.
+notes: Plant efficiency 0.33 is a typical light-water Rankine figure. Real discharge
+  burnup is about 45 GWd per tonne of heavy metal, near 3.9e12 J/kg, because a reactor
+  does not fission an entire kilogram of pure U-235. The 200 SWU figure is an estimate.
+sources:
+- https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy
+- https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/nuclear-power-reactors
+- https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment

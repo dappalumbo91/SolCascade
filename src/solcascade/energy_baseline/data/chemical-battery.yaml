@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Chemistry)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: chemical-battery
+name: Electrochemical battery
+category: mainstream
+governing_equation: A closed redox cell stores charge. Specific energy is the integral
+  of voltage times capacity per kilogram.
+governing_source: https://doi.org/10.1021/cr500003w
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: An ideal storage cell returns the electrical work put in.
+  It is not a heat engine.
+demonstrated_efficiency: 0.9
+demonstrated_year: 2024
+demonstrated_source: https://doi.org/10.1021/cr500003w
+energy_density_j: 1000000.0
+energy_density_basis: J/kg put into a cell whose round trip is 0.90, so the delivered
+  figure is 250 Wh/kg
+reference_unit: 1 kg of a lithium-ion cell at about 250 Wh/kg delivered
+power_density_w: 1000.0
+power_density_basis: W/kg, a round continuous-discharge rate for an energy cell, estimate
+input_energy_j: 1000000.0
+input_energy_basis: J/kg of charge. The battery is a store. This input is the charge,
+  not a fuel discovery.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: Materials and cycle life. The cell does not create the energy
+  it returns.
+notes: 250 Wh/kg is 9.0e5 J/kg delivered. Dividing by 0.90 makes the stored joules
+  1.0e6. The 2014 Chem. Rev. article is the lithium-rechargeable review, not a 2024
+  datasheet. The year marks the commercial specific-energy neighborhood.
+sources:
+- https://doi.org/10.1021/cr500003w

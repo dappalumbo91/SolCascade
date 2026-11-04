@@ -1,0 +1,40 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Fluid_Dynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: hydroelectric
+name: Hydroelectric generation
+category: mainstream
+governing_equation: Potential energy m g h, with g = 9.81 m/s2. A turbine converts
+  most of that head.
+governing_source: https://www.iea.org/energy-system/renewables/hydroelectricity
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: A lossless turbine would return m g h. Hydraulic losses
+  keep real machines below 1.
+demonstrated_efficiency: 0.9
+demonstrated_year: 2020
+demonstrated_source: https://www.iea.org/energy-system/renewables/hydroelectricity
+energy_density_j: 981.0
+energy_density_basis: J/kg of water dropped 100 m
+reference_unit: 1 kg of water, 100 m head
+power_density_w: null
+power_density_basis: A dam is a site, not a universal W/m3
+input_energy_j: 17.658000000000005
+input_energy_basis: J/kg of station auxiliaries, taken as 2% of the delivered electricity
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: The turbine is mature. The drive is the water cycle, which is
+  external.
+notes: 100 m and 0.90 and the 2% auxiliary fraction are catalog round numbers for
+  a high-head plant. IEA is the institutional page for the operating fleet.
+sources:
+- https://www.iea.org/energy-system/renewables/hydroelectricity

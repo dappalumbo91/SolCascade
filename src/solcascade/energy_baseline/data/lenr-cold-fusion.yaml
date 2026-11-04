@@ -1,0 +1,46 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: 1989 excess-heat claim. DoE reviews did not establish a nuclear source. Watts
+  were not copied because a single paper value was not re-read for this row.
+replication_status: disputed
+figure_status: measured
+id: lenr-cold-fusion
+name: LENR or cold fusion
+category: fringe
+governing_equation: The 1989 claim was excess heat in a palladium-deuterium electrolytic
+  cell, attributed by the authors to nuclear fusion at room temperature.
+governing_source: https://doi.org/10.1016/0022-0728(89)80006-3
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: No accepted ceiling exists because the effect is not an
+  established reaction.
+demonstrated_efficiency: null
+demonstrated_year: 1989
+demonstrated_source: https://doi.org/10.1016/0022-0728(89)80006-3
+energy_density_j: null
+energy_density_basis: Excess heat was claimed. A joule-per-kilogram figure was not
+  copied.
+reference_unit: one Fleischmann-Pons electrolytic cell
+power_density_w: null
+power_density_basis: Claims were of order watts in a small cell. A single watt value
+  was not copied from the paper in this pass.
+input_energy_j: null
+input_energy_basis: Electrolysis input is part of the dispute and was not assigned
+  here
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 1
+engineering_barrier: Independent replication as a nuclear heat source has not been
+  established.
+notes: Fleischmann and Pons, J. Electroanal. Chem. 261, 301 (1989). 'Measured' means
+  the authors reported heat. It does not mean the nuclear claim is accepted. Later
+  reports stay in the disputed class.
+sources:
+- https://doi.org/10.1016/0022-0728(89)80006-3
+- https://www.energy.gov/sites/default/files/2013/11/f4/DOE_2004_LENR_Report.pdf

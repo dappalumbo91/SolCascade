@@ -1,0 +1,4 @@
+{
+  "_comment": "Dimensionless multiplier on blanket source neutrons. It is a slot test. It is not an FSOT neutron-yield law, and it does not change fusion joules or the coil supply. Per-source multiplication stays fixed because fissions and the source count move together. Fission joules scale with this number.",
+  "blanket.neutron_yield_scale": 2.0
+}

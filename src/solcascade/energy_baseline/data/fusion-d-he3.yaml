@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: unreplicated
+figure_status: estimate
+id: fusion-d-he3
+name: D-He3 fusion
+category: mainstream
+governing_equation: D + He-3 -> He-4 + p + 18.3 MeV. Most of the energy is in charged
+  particles. The reactivity lies above DT.
+governing_source: https://doi.org/10.1088/0029-5515/32/4/I07
+efficiency_ceiling: 0.7
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Charged-particle direct conversion is not a steam cycle.
+  0.70 is an aspirational direct-converter bound, not a measured device.
+demonstrated_efficiency: null
+demonstrated_year: null
+demonstrated_source: https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power
+energy_density_j: 351030134762738.25
+energy_density_basis: J/kg of stoichiometric D + He-3 at 18.3 MeV per reaction
+reference_unit: 1 kg of stoichiometric deuterium plus helium-3
+power_density_w: null
+power_density_basis: No power reactor
+input_energy_j: null
+input_energy_basis: No plant energy balance. He-3 supply and plasma drive are both
+  unsolved at this scale.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: He-3 inventory and a higher temperature than DT, with no net-electricity
+  experiment.
+notes: The joule density is the reaction Q times the number of reactions in 1 kg.
+  It is not a device result. Bosch-Hale is cited only as the reactivity-fit literature
+  for advanced fuels, not as a plant measurement.
+sources:
+- https://doi.org/10.1088/0029-5515/32/4/I07

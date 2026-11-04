@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: single_experiment
+figure_status: mixed
+id: fusion-dt-inertial
+name: Inertial DT fusion
+category: mainstream
+governing_equation: The same DT reaction, with a capsule compressed by a laser. Target
+  gain is fusion yield divided by laser energy on the target.
+governing_source: https://doi.org/10.1103/PhysRevLett.132.065102
+efficiency_ceiling: 0.4
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: A power plant would still convert blanket heat. The NIF
+  shot had no electrical conversion stage.
+demonstrated_efficiency: 1.0
+demonstrated_year: 2022
+demonstrated_source: https://doi.org/10.1103/PhysRevLett.132.065102
+energy_density_j: 3100000.0
+energy_density_basis: J of fusion yield on the 5 December 2022 NIF shot
+reference_unit: one NIF indirect-drive shot, 3.1 MJ fusion
+power_density_w: null
+power_density_basis: A single shot has no steady watts per cubic meter of a plant
+input_energy_j: 350000000.0
+input_energy_basis: J drawn from the facility grid, midpoint of the often-quoted 300
+  to 400 MJ. Estimate, not a line item in the PRL.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: Target gain above 1 on the laser still leaves the shot short
+  of the grid energy, and the shot does not repeat as a plant.
+notes: 'Abu-Shawareb et al., Phys. Rev. Lett. 132, 065102 (2024): 2.05 MJ of laser
+  light produced 3.1 MJ of fusion, target gain 1.5. The grid figure is an estimate
+  around that shot. Later shots raised the yield; this row keeps the cited paper.'
+sources:
+- https://doi.org/10.1103/PhysRevLett.132.065102

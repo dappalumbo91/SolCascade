@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Acoustics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: The optical flash is replicated. The Taleyarkhan bubble-fusion claim is disputed.
+  No electrical watts are entered.
+replication_status: disputed
+figure_status: measured
+id: sonoluminescence
+name: Sonoluminescence
+category: fringe
+governing_equation: A driven bubble collapses and emits a brief flash. The acoustic
+  drive supplies the energy. Bubble-fusion claims are separate and disputed.
+governing_source: https://doi.org/10.1126/science.276.5317.1398
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Light output is a small fraction of the acoustic energy.
+  No plant ceiling is defined.
+demonstrated_efficiency: null
+demonstrated_year: 1997
+demonstrated_source: https://doi.org/10.1126/science.276.5317.1398
+energy_density_j: null
+energy_density_basis: Optical energy per collapse is tiny and was not assigned a joule
+  figure here
+reference_unit: one acoustically driven bubble
+power_density_w: null
+power_density_basis: Optical power of a single bubble is far below the acoustic drive
+input_energy_j: null
+input_energy_basis: The acoustic transducer is the drive. Its joules exceed the light.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: The flash is real and useless as a generator. Neutron claims
+  from collapsing bubbles were not replicated.
+notes: Barber et al. and the single-bubble literature established the flash. The Science
+  DOI is a single-bubble temperatures paper path. Replication status 'disputed' refers
+  to fusion claims, not to the existence of the light.
+sources:
+- https://doi.org/10.1126/science.276.5317.1398

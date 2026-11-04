@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Electromagnetism)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Propulsion load, not an energy source. Yamato 1 demonstrated low-speed thrust.
+  It did not generate net energy.
+replication_status: single_experiment
+figure_status: measured
+id: mhd-propulsion
+name: MHD propulsion
+category: fringe
+governing_equation: A current in seawater crossed with a magnetic field produces a
+  Lorentz force. The ship draws electrical power. It does not generate it.
+governing_source: https://doi.org/10.1109/20.305682
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Thrust power cannot exceed the electrical input. Real seawater
+  channels are far below 1.
+demonstrated_efficiency: null
+demonstrated_year: 1992
+demonstrated_source: https://doi.org/10.1109/20.305682
+energy_density_j: null
+energy_density_basis: No fuel energy. The device is a motor.
+reference_unit: one MHD thruster, Yamato 1 class
+power_density_w: null
+power_density_basis: The 1992 boat was a load of hundreds of kilowatts. A thrust-power
+  watt figure was not copied.
+input_energy_j: null
+input_energy_basis: Electrical input is required continuously. A joule-per-voyage
+  figure was not copied.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: It consumes electricity to make thrust. It is in the catalog
+  because it is often confused with an MHD generator.
+notes: 'The IEEE DOI is a superconducting MHD thruster paper path from that era. If
+  the volume is off, the classification stands: the Lorentz thruster is a motor.'
+sources:
+- https://doi.org/10.1109/20.305682

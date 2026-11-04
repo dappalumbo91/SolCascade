@@ -1,0 +1,40 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Geophysics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: geothermal
+name: Geothermal generation
+category: mainstream
+governing_equation: Heat mined from rock or brine, c dT per kilogram, then a flash
+  or binary cycle.
+governing_source: https://www.iea.org/energy-system/renewables/geothermal-power
+efficiency_ceiling: 0.4
+efficiency_ceiling_kind: carnot
+efficiency_ceiling_source: A 500 K reservoir rejected at 300 K has Carnot efficiency
+  0.40.
+demonstrated_efficiency: 0.12
+demonstrated_year: 2020
+demonstrated_source: https://www.iea.org/energy-system/renewables/geothermal-power
+energy_density_j: 418000.0
+energy_density_basis: J/kg of water cooled by 100 K at 4180 J/kg/K
+reference_unit: 1 kg of geothermal brine, 100 K drop
+power_density_w: 2.0
+power_density_basis: W/m2 of land over a well field, estimate
+input_energy_j: 12540.0
+input_energy_basis: J/kg of pumping electricity, taken as 25% of the delivered electricity
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: Wells, scaling, and parasitic pump power. The heat is already
+  in the rock.
+notes: 0.12 is a binary-plant order. The 100 K drop and the 25% parasitic fraction
+  are catalog assumptions. IEA covers the operating resource.
+sources:
+- https://www.iea.org/energy-system/renewables/geothermal-power

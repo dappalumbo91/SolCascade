@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Thermodynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: thermionic
+name: Thermionic converter
+category: mainstream
+governing_equation: 'Richardson emission: hot electrons cross a vacuum or cesium gap.
+  The converter needs a heat source.'
+governing_source: https://doi.org/10.1016/0022-3107(69)90042-2
+efficiency_ceiling: 0.3
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Ideal thermionic gaps are quoted near a few tens of percent.
+  0.30 is that class of bound, not a TOPAZ measurement.
+demonstrated_efficiency: 0.05
+demonstrated_year: 1987
+demonstrated_source: https://world-nuclear.org/information-library/non-power-nuclear-applications/transport/nuclear-reactors-for-space
+energy_density_j: 82099804396887.4
+energy_density_basis: J/kg of U-235 fully fissioned. The thermionic stage is the 0.05
+  factor.
+reference_unit: 1 kg U-235, complete fission, thermionic conversion
+power_density_w: 10000.0
+power_density_basis: W/m2 of emitter, a round cesium-diode order, estimate
+input_energy_j: 36000000000.0
+input_energy_basis: Same enrichment-electricity estimate as the thermal-fission row
+chain_reaction: true
+self_sustaining: true
+continuous_external_drive: false
+trl: 7
+engineering_barrier: Emitter life and the low fraction of fission heat turned into
+  electricity.
+notes: Space reactors such as TOPAZ flew thermionic conversion. The 0.05 efficiency
+  is a round historical device figure. The chain is the fission chain, not the diode.
+  The James fission-energy DOI is a placeholder only if it resolves; the operating
+  record used here is the World Nuclear Association space-reactor page.
+sources:
+- https://world-nuclear.org/information-library/non-power-nuclear-applications/transport/nuclear-reactors-for-space

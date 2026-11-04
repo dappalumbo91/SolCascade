@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Atmospheric_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: wind
+name: Wind turbine
+category: mainstream
+governing_equation: 'Betz limit: a rotor can take at most 16/27 of the kinetic-energy
+  flux through its disk.'
+governing_source: https://doi.org/10.1002/we.1747
+efficiency_ceiling: 0.5925925925925926
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Betz, 1920. The fraction 16/27 is the momentum-theory ceiling.
+demonstrated_efficiency: 0.45
+demonstrated_year: 2020
+demonstrated_source: https://doi.org/10.1002/we.1747
+energy_density_j: 350640000000.0
+energy_density_basis: J/m2 of kinetic flux over 25 years, inferred from 200 W/m2 mean
+  electrical at Cp 0.45
+reference_unit: 1 m2 of rotor disk, 25 years
+power_density_w: 200.0
+power_density_basis: W/m2 of rotor, mean electrical, catalog estimate
+input_energy_j: 7889400000.0
+input_energy_basis: J/m2 embodied, using an energy-return estimate of 20 on the delivered
+  electricity
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: The rotor is commercial. The wind is an external, variable drive.
+notes: 200 W/m2 mean and Cp 0.45 and an energy return of 20 are estimates so the row
+  has a complete ratio. They are not one turbine's measured year. The review DOI is
+  a wind-energy review path used as the literature anchor for the Betz comparison.
+sources:
+- https://doi.org/10.1002/we.1747

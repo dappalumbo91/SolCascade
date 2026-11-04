@@ -1,0 +1,41 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: fission-fast
+name: Fast-reactor fission
+category: mainstream
+governing_equation: The same ~200 MeV fission energy, with a fast spectrum that can
+  fission and breed actinides a thermal reactor mostly leaves behind.
+governing_source: https://world-nuclear.org/information-library/current-and-future-generation/fast-neutron-reactors
+efficiency_ceiling: 0.5
+efficiency_ceiling_kind: carnot
+efficiency_ceiling_source: Sodium outlet temperatures support a higher Rankine or
+  Brayton bound than a light-water cycle. 0.50 is that order of bound.
+demonstrated_efficiency: 0.4
+demonstrated_year: 2016
+demonstrated_source: https://world-nuclear.org/information-library/country-profiles/countries-o-s/russia-nuclear-power
+energy_density_j: 80723300472959.88
+energy_density_basis: J/kg of Pu-239 if every nucleus fissions at 200 MeV
+reference_unit: 1 kg Pu-239, complete fission
+power_density_w: 300000000.0
+power_density_basis: W/m3, representative fast-reactor core, estimate
+input_energy_j: 36000000000.0
+input_energy_basis: Same enrichment-electricity estimate as the thermal row, not a
+  measured BN-800 energy balance
+chain_reaction: true
+self_sustaining: true
+continuous_external_drive: false
+trl: 8
+engineering_barrier: Sodium systems, fuel recycling, and a small commercial fleet.
+notes: BN-800 is an operating fast reactor. The 0.40 efficiency is a round plant figure,
+  not a single audited heat balance copied from one paper. Power density is an estimate.
+sources:
+- https://world-nuclear.org/information-library/current-and-future-generation/fast-neutron-reactors
+- https://world-nuclear.org/information-library/country-profiles/countries-o-s/russia-nuclear-power

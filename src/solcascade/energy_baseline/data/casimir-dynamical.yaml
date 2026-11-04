@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Quantum_Mechanics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Photon creation in a driven circuit is a laboratory result. It is not a net-energy
+  generator. Watts of electricity were not stated.
+replication_status: replicated
+figure_status: measured
+id: casimir-dynamical
+name: Dynamical Casimir effect
+category: fringe
+governing_equation: A mirror moving at a frequency comparable to the cavity mode can
+  convert vacuum fluctuations into real photons.
+governing_source: https://doi.org/10.1038/nature10561
+efficiency_ceiling: null
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: The experiment creates microwave photons. It does not state
+  a power-plant ceiling.
+demonstrated_efficiency: null
+demonstrated_year: 2011
+demonstrated_source: https://doi.org/10.1038/nature10561
+energy_density_j: null
+energy_density_basis: Photon number was measured. A joule yield of usable electricity
+  was not.
+reference_unit: one superconducting-circuit dynamical Casimir run
+power_density_w: null
+power_density_basis: Not reported as watts of delivered electricity
+input_energy_j: null
+input_energy_basis: The drive that modulates the boundary is an external microwave
+  drive. Its joules were not copied.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: The photons are a detection result. The drive costs more than
+  the photons return.
+notes: Wilson et al., Nature 479, 376 (2011). Replication here means the photon observation,
+  not an energy-producing machine.
+sources:
+- https://doi.org/10.1038/nature10561

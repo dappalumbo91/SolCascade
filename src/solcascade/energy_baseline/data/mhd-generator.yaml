@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Fluid_Dynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: single_experiment
+figure_status: estimate
+id: mhd-generator
+name: MHD generator
+category: mainstream
+governing_equation: Faraday law on a conducting gas moving through a magnetic field,
+  emf = u B L.
+governing_source: https://doi.org/10.1016/0360-3199(94)E0025-T
+efficiency_ceiling: 0.6
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: An ideal MHD expansion can sit above a steam tail. 0.60
+  is a textbook-class ceiling, not the U-25 result.
+demonstrated_efficiency: 0.2
+demonstrated_year: 1975
+demonstrated_source: https://doi.org/10.1016/0360-3199(94)E0025-T
+energy_density_j: 55500000.0
+energy_density_basis: J/kg methane higher heating value, the heat that would feed
+  an open-cycle channel
+reference_unit: 1 kg methane through an MHD channel
+power_density_w: null
+power_density_basis: Pilot channels reached megawatts. A universal W/m3 was not copied.
+input_energy_j: 1000.0
+input_energy_basis: J of ignition order. The magnet supply is an extra continuous
+  drive and is not in this 1000 J.
+chain_reaction: true
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: The magnet and the seed chemistry. No utility plant is running.
+notes: 0.20 is an experimental-era electrical fraction, labeled an estimate. The magnet
+  is a continuous electrical drive even though the flame is a chemical chain. The
+  DOI is a hydrogen/MHD review path; if it does not resolve, the governing law is
+  still Faraday's uBL.
+sources:
+- https://doi.org/10.1016/0360-3199(94)E0025-T

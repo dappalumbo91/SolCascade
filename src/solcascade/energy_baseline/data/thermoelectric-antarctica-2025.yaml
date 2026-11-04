@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Thermodynamics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: 4.4
+flag: 2025 field result. Net watts are thermoelectric conversion of geothermal heat,
+  not a new interaction. One installation.
+replication_status: single_experiment
+figure_status: measured
+id: thermoelectric-antarctica-2025
+name: Antarctic geothermal thermoelectric generator
+category: cutting_edge
+governing_equation: The same Seebeck module as the thermoelectric row, here on a geothermal
+  gradient with a passive phase-change sink.
+governing_source: https://doi.org/10.1016/j.applthermaleng.2025.127517
+efficiency_ceiling: 0.2
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: https://doi.org/10.1038/nmat2090
+demonstrated_efficiency: 1.0
+demonstrated_year: 2025
+demonstrated_source: https://doi.org/10.1016/j.applthermaleng.2025.127517
+energy_density_j: 136800000000.0
+energy_density_basis: J of electricity in one reported year, 38 kWh, for the whole
+  installation
+reference_unit: the Deception Island installation, one year
+power_density_w: 4.4
+power_density_basis: W average net electrical output of the reported installation
+input_energy_j: 0.0
+input_energy_basis: The paper describes a passive installation. Auxiliary electrical
+  input is taken as zero.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 6
+engineering_barrier: 4.4 W average. Scaling past a instrument site is the barrier,
+  not the Seebeck effect.
+notes: Applied Thermal Engineering, DOI 10.1016/j.applthermaleng.2025.127517. Reported
+  average net power 4.4 W and 38 kWh in a year. Efficiency is 1 in the rank because
+  38 kWh is already electrical. Independent replication by another group is not claimed
+  here.
+sources:
+- https://doi.org/10.1016/j.applthermaleng.2025.127517

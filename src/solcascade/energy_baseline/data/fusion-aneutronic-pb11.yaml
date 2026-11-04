@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: single_experiment
+figure_status: estimate
+id: fusion-aneutronic-pb11
+name: Proton-boron-11 fusion
+category: mainstream
+governing_equation: p + B-11 -> 3 He-4 + 8.7 MeV. The products are charged. The cross
+  section peaks at a much higher energy than DT.
+governing_source: https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power
+efficiency_ceiling: 0.7
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Same direct-conversion aspiration as D-He3. No converter
+  has turned a p-B11 plasma into net electricity.
+demonstrated_efficiency: null
+demonstrated_year: null
+demonstrated_source: https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power
+energy_density_j: 69951865789399.76
+energy_density_basis: J/kg of stoichiometric hydrogen plus boron-11 at 8.7 MeV per
+  reaction
+reference_unit: 1 kg of stoichiometric proton plus boron-11 fuel
+power_density_w: null
+power_density_basis: No power reactor
+input_energy_j: null
+input_energy_basis: Laser and beam experiments consume far more energy than the alphas
+  return. A device input was not copied.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: Bremsstrahlung and the high ion energy. Experiments detect alphas.
+  They do not show a plant.
+notes: The energy density is nuclear data for a complete burn, not a measured yield.
+  Company claims of a path to a reactor are not used as a watt figure.
+sources:
+- https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power

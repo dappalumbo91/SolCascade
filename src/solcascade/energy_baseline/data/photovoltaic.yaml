@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Optics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: photovoltaic
+name: Photovoltaic cell
+category: mainstream
+governing_equation: 'Detailed balance: a single junction cannot exceed the Shockley-Queisser
+  limit. Practical rows use AM1.5 and a stated annual insolation.'
+governing_source: https://doi.org/10.1063/1.1736034
+efficiency_ceiling: 0.33
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: https://doi.org/10.1063/1.1736034
+demonstrated_efficiency: 0.267
+demonstrated_year: 2024
+demonstrated_source: https://www.nrel.gov/pv/cell-efficiency.html
+energy_density_j: 162000000000.0
+energy_density_basis: J/m2 of sunlight over 30 years at 1500 kWh/m2/year
+reference_unit: 1 m2 of collector, 30 years, 1500 kWh/m2/year
+power_density_w: 267.0
+power_density_basis: W/m2 at 1000 W/m2 standard test irradiance times 0.267
+input_energy_j: 2162700000.0
+input_energy_basis: J/m2 of manufacturing energy, taken as 1.5 years of the electrical
+  output
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: The cell is manufactured once. After that the drive is sunlight,
+  which is external and intermittent.
+notes: 0.267 is a research-cell neighborhood on the NREL chart, not a module rating
+  and not a claim that one exact record was frozen. Shockley and Queisser, J. Appl.
+  Phys. 32, 510 (1961), is the ceiling paper. Module payback near 1.5 years is a 2020s
+  crystalline-silicon order.
+sources:
+- https://doi.org/10.1063/1.1736034
+- https://www.nrel.gov/pv/cell-efficiency.html

@@ -1,0 +1,45 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Nuclear_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: measured
+id: fusion-dt-magnetic
+name: Magnetic DT fusion
+category: mainstream
+governing_equation: D + T -> He-4 + n + 17.6 MeV. A tokamak must keep the plasma hotter
+  than its losses. Q is fusion power divided by injected heating power.
+governing_source: https://doi.org/10.1088/1741-4326/ace2d8
+efficiency_ceiling: 0.4
+efficiency_ceiling_kind: thermodynamic
+efficiency_ceiling_source: A future blanket and Rankine or Brayton plant would still
+  sit under a thermal ceiling near 0.40. No such plant has run.
+demonstrated_efficiency: 1.0
+demonstrated_year: 2022
+demonstrated_source: https://doi.org/10.1088/1741-4326/ace2d8
+energy_density_j: 59000000.0
+energy_density_basis: J of fusion energy in one JET pulse, already the reported yield
+reference_unit: one JET deuterium-tritium pulse, 59 MJ fusion
+power_density_w: 10100000.0
+power_density_basis: W of fusion in the 5 s window at 10.1 MW, not watts per cubic
+  meter of a plant
+input_energy_j: 178787878.78787878
+input_energy_basis: J of injected heating implied by Q = 0.33. Magnet and plant electricity
+  are outside this number.
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: The pulse still consumes more heating than it returns, and the
+  magnets are a further supply term.
+notes: 'Maslov et al., Nuclear Fusion 63, 112002 (2023): pulse 99971 released 59 MJ,
+  of which 50.5 MJ fell in 5 s at 10.1 MW, average Q 0.33 against injected heating.
+  Demonstrated efficiency is 1 here because the energy density is already that fusion
+  yield, not electricity.'
+sources:
+- https://doi.org/10.1088/1741-4326/ace2d8
+- https://doi.org/10.1088/0029-5515/32/4/I07

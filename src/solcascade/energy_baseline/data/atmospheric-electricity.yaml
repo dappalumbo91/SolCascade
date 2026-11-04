@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Atmospheric_Physics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: The fair-weather circuit is measured. A power plant on it is the fringe step.
+  The row scores the measured flux, not a secret generator.
+replication_status: replicated
+figure_status: mixed
+id: atmospheric-electricity
+name: Fair-weather atmospheric electricity
+category: fringe
+governing_equation: A vertical field near 100 V/m and a current density near 2 pA/m2.
+  Power density is their product.
+governing_source: https://doi.org/10.1007/s10712-012-9210-2
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Collecting the entire fair-weather current would still
+  yield only the field times that current.
+demonstrated_efficiency: 1.0
+demonstrated_year: 2013
+demonstrated_source: https://doi.org/10.1007/s10712-012-9210-2
+energy_density_j: 0.00631152
+energy_density_basis: J/m2/year at 100 V/m times 2 pA/m2
+reference_unit: 1 m2 of ground, one year of fair-weather current
+power_density_w: 2.0e-10
+power_density_basis: W/m2, 100 V/m times 2e-12 A/m2
+input_energy_j: 0.0
+input_energy_basis: A passive collector draws no auxiliary electricity in this idealization
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: The global circuit maintains the field. The watts per square
+  meter are a fraction of a nanowatt.
+notes: Harrison, Surv. Geophys. 34, 209 (2013), reviews the Carnegie curve. 100 V/m
+  and 2 pA/m2 are the standard orders used here. Efficiency 1 means the row scores
+  that electrical flux directly.
+sources:
+- https://doi.org/10.1007/s10712-012-9210-2

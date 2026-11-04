@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Quantum_Mechanics)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: 0.0
+flag: The force measurement is replicated. Net energy extraction is not. Output recorded
+  as 0 W.
+replication_status: replicated
+figure_status: mixed
+id: casimir-static
+name: Static Casimir cavity
+category: fringe
+governing_equation: Energy of a pair of plates E = - (pi^2 hbar c A) / (720 d^3).
+  The force is attractive. Cycling the gap takes at least this energy back.
+governing_source: https://doi.org/10.1103/PhysRevLett.78.5
+efficiency_ceiling: 0.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: No cycle has been shown that returns net work from a static
+  Casimir cavity.
+demonstrated_efficiency: 0.0
+demonstrated_year: 1997
+demonstrated_source: https://doi.org/10.1103/PhysRevLett.78.5
+energy_density_j: 4.3e-13
+energy_density_basis: J, magnitude of the Casimir energy for about 10 cm2 at a 1 micrometer
+  gap
+reference_unit: 10 cm2 plates at a 1 micrometer separation
+power_density_w: 0.0
+power_density_basis: W of net electrical output from a published cavity engine
+input_energy_j: 4.3e-13
+input_energy_basis: J to reopen the gap, at least the magnitude of the Casimir energy
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 2
+engineering_barrier: The force is real. A motor that gains net energy from it has
+  no accepted demonstration.
+notes: Lamoreaux, Phys. Rev. Lett. 78, 5 (1997), measured the force. The 4.3e-13 J
+  figure is the standard cavity estimate for 10 cm2 at 1 um, the same order as the
+  warp-ledger comparison. It is a magnitude, and the energy is negative.
+sources:
+- https://doi.org/10.1103/PhysRevLett.78.5

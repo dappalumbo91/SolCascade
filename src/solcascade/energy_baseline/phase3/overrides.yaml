@@ -1,0 +1,35 @@
+# Derived overrides for the phase-three ranker.
+# The catalog files in ../data/ stay as phase one wrote them.
+# Seconds are computed at load by gyro_walk_time_s. This file stores the
+# peak-state inputs, not the seconds.
+formula_id: gyro_walk_time_s
+yield_formula_id: confined_dt_yield_j
+gamma_enters_the_time: false
+radius_m: 0.018
+temperature_keV: 3.858024691358024
+field_T: 1.6696763518751803
+ion_density_m3: 1.0e20
+ion_temperature_keV: 0.5
+radius0_m: 0.05
+deuterium_fraction: 0.5
+inputs_source: runs/fsot-apply/report.json confinement
+source: src/solcascade/plasma/metrics.py gyro_walk_time_s
+applies_to:
+  - fusion-dt-magnetic
+  - fusion-dt-inertial
+  - fusion-dt-pulsed-power
+  - fusion-d-he3
+  - fusion-aneutronic-pb11
+yield_applies_to:
+  - fusion-dt-magnetic
+  - fusion-dt-inertial
+  - fusion-dt-pulsed-power
+note: >
+  Peak radius, temperature, and field are the confinement block of
+  runs/fsot-apply/report.json. The initial density, temperature, radius,
+  and deuterium fraction are the checked-in pulse in
+  configs/minimal_pipeline.yaml. The ranker compresses that pulse to the
+  peak radius, calls gyro_walk_time_s, and holds the DT power for that time.
+  Head, tidal range, plate gap, wind speed, bandgap, the D-He3 burn, and
+  the p-B11 burn are computed at load from this peak and the catalog
+  equations. They are not stored here as extra numbers.

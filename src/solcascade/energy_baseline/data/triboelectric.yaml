@@ -1,0 +1,44 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Condensed_Matter)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Laboratory harvesters are real. Treating them as a primary energy source is
+  the fringe step. Output at scale is still the mechanical input times a small efficiency.
+replication_status: replicated
+figure_status: estimate
+id: triboelectric
+name: Triboelectric harvester
+category: fringe
+governing_equation: Contact electrification plus electrostatic induction. The energy
+  comes from the mechanical motion that separates the charges.
+governing_source: https://doi.org/10.1016/j.nanoen.2012.01.004
+efficiency_ceiling: 0.5
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: A charge separator can return a fraction of the mechanical
+  work. 0.50 is an allowance, not a theorem.
+demonstrated_efficiency: 0.1
+demonstrated_year: 2012
+demonstrated_source: https://doi.org/10.1016/j.nanoen.2012.01.004
+energy_density_j: 315576000.0
+energy_density_basis: J/m2 per year at an optimistic continuous 10 W/m2 of mechanical
+  input
+reference_unit: 1 m2 of harvester, one year, 10 W/m2 mechanical input
+power_density_w: 1.0
+power_density_basis: W/m2 electrical, 0.10 of the assumed 10 W/m2 mechanical flux,
+  estimate
+input_energy_j: 315576000.0
+input_energy_basis: J/m2/year of mechanical work that has to be supplied
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 4
+engineering_barrier: The harvester does not create the motion. At grid scale it is
+  a small converter of someone else's mechanical work.
+notes: Fan, Tian, and Wang, Nano Energy 1, 328 (2012), introduced the triboelectric
+  nanogenerator. The 10 W/m2 mechanical flux is an assumption so the ratio can be
+  scored. It is not a measured power plant.
+sources:
+- https://doi.org/10.1016/j.nanoen.2012.01.004

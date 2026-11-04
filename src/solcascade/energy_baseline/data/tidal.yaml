@@ -1,0 +1,40 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Oceanography)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: mixed
+id: tidal
+name: Tidal barrage
+category: mainstream
+governing_equation: Basin potential per square meter is (1/2) rho g R^2 for tidal
+  range R.
+governing_source: https://www.edf.fr/en/the-edf-group/industrial-provider/renewable-energies/marine-energy/tidal-energy
+efficiency_ceiling: 1.0
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: A lossless turbine would return the basin potential. Real
+  machines do not.
+demonstrated_efficiency: 0.8
+demonstrated_year: 1966
+demonstrated_source: https://www.edf.fr/en/the-edf-group/industrial-provider/renewable-energies/marine-energy/tidal-energy
+energy_density_j: 313920.0
+energy_density_basis: J/m2 of basin for one 8 m tidal range
+reference_unit: 1 m2 of basin, one 8 m tide
+power_density_w: null
+power_density_basis: La Rance is 240 MW at its site. A universal W/m2 was not copied.
+input_energy_j: 5022.72
+input_energy_basis: J/m2 of auxiliaries, 2% of delivered energy for one tide
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 9
+engineering_barrier: Geography and ecology. The tide is the external drive. La Rance
+  has operated since 1966.
+notes: The 8 m range and 0.80 turbine efficiency are round figures for a barrage of
+  the La Rance class. EDF is the operator page.
+sources:
+- https://www.edf.fr/en/the-edf-group/industrial-provider/renewable-energies/marine-energy/tidal-energy

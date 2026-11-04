@@ -1,0 +1,42 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Condensed_Matter)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: Harvesting is real at milliwatts to watts. It is not a primary source. The fringe
+  label is the claim that a floor or a road is a power plant.
+replication_status: replicated
+figure_status: estimate
+id: piezoelectric
+name: Piezoelectric harvester
+category: fringe
+governing_equation: Strain produces charge, d times stress. The energy is the mechanical
+  work done on the ceramic.
+governing_source: https://doi.org/10.1088/0964-1726/16/3/R01
+efficiency_ceiling: 0.5
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Electromechanical coupling can be high in a resonator and
+  is still a fraction of the mechanical work.
+demonstrated_efficiency: 0.2
+demonstrated_year: 2007
+demonstrated_source: https://doi.org/10.1088/0964-1726/16/3/R01
+energy_density_j: 31557600.0
+energy_density_basis: J/m2 per year at 1 W/m2 of mechanical input, a road-or-floor
+  order
+reference_unit: 1 m2 of piezoelectric surface, one year, 1 W/m2 mechanical
+power_density_w: 0.2
+power_density_basis: W/m2 electrical at the assumed 0.20 conversion
+input_energy_j: 31557600.0
+input_energy_basis: J/m2/year of mechanical work supplied by traffic or machinery
+chain_reaction: false
+self_sustaining: false
+continuous_external_drive: true
+trl: 5
+engineering_barrier: You must keep straining the material. The watts per square meter
+  stay small.
+notes: Anton and Sodano, Smart Mater. Struct. 16, R1 (2007), is a harvesting review.
+  The 1 W/m2 mechanical input is a catalog assumption.
+sources:
+- https://doi.org/10.1088/0964-1726/16/3/R01

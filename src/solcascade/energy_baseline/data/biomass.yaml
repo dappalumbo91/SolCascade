@@ -1,0 +1,43 @@
+fsot_status: open_gap
+fsot_scalar: null
+fsot_mapping: null
+fsot_note: C:/Users/damia/Desktop/FSOT-2.1-Lean/vendor/fsot_compute.py domain_scalar(Chemistry)
+  is a dimensionless fold value. It does not set this mechanism's efficiency, energy
+  density, or input energy. No mapping is emitted.
+claimed_output_w: null
+flag: null
+replication_status: replicated
+figure_status: estimate
+id: biomass
+name: Biomass combustion
+category: mainstream
+governing_equation: Photosynthesis stores a small fraction of sunlight. Dry wood then
+  burns at about 15 MJ/kg.
+governing_source: https://www.iea.org/energy-system/renewables/bioenergy
+efficiency_ceiling: 0.06
+efficiency_ceiling_kind: other
+efficiency_ceiling_source: Field photosynthesis is often near 1% of sunlight and can
+  approach a few percent. 0.06 is a high biological ceiling, not a boiler.
+demonstrated_efficiency: 0.25
+demonstrated_year: 2020
+demonstrated_source: https://www.iea.org/energy-system/renewables/bioenergy
+energy_density_j: 15000000.0
+energy_density_basis: J/kg dry wood, about 15 MJ/kg
+reference_unit: 1 kg dry wood
+power_density_w: 0.5
+power_density_basis: W/m2 of land, a round sustainable-biomass order, estimate
+input_energy_j: 468750.0
+input_energy_basis: J/kg of cultivation and drying, using an energy-return estimate
+  of 8 on the delivered electricity
+chain_reaction: true
+self_sustaining: true
+continuous_external_drive: false
+trl: 9
+engineering_barrier: Land and the low watts per square meter. The boiler itself is
+  ordinary combustion.
+notes: The 0.25 is a power-plant electrical efficiency on the wood's heat, so it is
+  not the photosynthetic ceiling. The ceiling field holds the biological bound. The
+  energy return of 8 is an estimate. Photosynthetic ceiling and boiler efficiency
+  answer different questions and are both recorded.
+sources:
+- https://www.iea.org/energy-system/renewables/bioenergy
