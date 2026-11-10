@@ -562,6 +562,18 @@ The command writes `runs/production/fission_decay_load.md`. The cooling load is 
 
 The one-second load is `(phi^-6/sqrt(G))*(1-alpha*e^-4)` times that heat, `1.76426e+08` W, against the fit `1.76425e+08` W. The one-day load is `((pi^-4*G^5)*(1-alpha*gamma^5))*(1-alpha*pi^-6)`, `2.00482e+07` W at six figures. The two-day load is `((pi^-5*phi)*(1-alpha*e^-4))*(1-alpha*pi^-6)`, `1.602e+07` W at six figures. The small-class loads are `5.29278e+07` W, `6.01447e+06` W, and `4.80601e+06` W. The fraction gaps are `3.97292e-06`, `3.34448e-06`, and `3.83823e-07`. The ratio of the derived one-day load to the derived one-second load is `0.113635`, gap `6.28438e-07`. The ratio of the derived two-day load to the derived one-day load is `0.799074`, gap `2.96064e-06`. Every gap meets the helium match `4.23431e-06`. Decay heat stays a cooling load. The checked-in schedule is not rewritten.
 
+## Fission decay heat
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_heat
+```
+
+The command writes `runs/production/fission_decay_heat.md`. The operating heat is the filed nameplate times the FSOT heat ratio. The bare value is pi minus gamma to the fourth, `pi-gamma^4`, gap `9.30911e-05`. One factor stays wider, `(pi-gamma^4)*(1-alpha*pi^-4)` at gap `1.81697e-05`. The closing ratio is `((pi-gamma^4)*(1-alpha*pi^-4))*(1-alpha*e^-6)`, gap `8.10204e-08`. One dressing of that anchor meets the helium match. The anchor has `116` dressings, median spacing `0.000511364`.
+
+The derived operating heat is `3.0303e+09` W on the `1000` MWe nameplate and `9.09091e+08` W at the `300` MWe boundary. Those six-figure prints agree with the filed heats. The implied efficiency agrees with the filed `0.33` at six figures. The cooling loads on this heat are `1.76426e+08` W, `2.00482e+07` W, and `1.602e+07` W, with gaps `4.05394e-06`, `3.4255e-06`, and `4.64844e-07` against the 1952 fit. Every gap meets the helium match `4.23431e-06`. The nameplate stays the published electric boundary. Decay heat stays a cooling load. The checked-in schedule is not rewritten.
+
 ## Tests
 
 ```bash
