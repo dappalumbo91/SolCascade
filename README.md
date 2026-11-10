@@ -258,7 +258,7 @@ The same fusion figure against the four supplies locked in `scripts/apply_fsot.p
 
 The Helmholtz, flat, and optimal same-B draws sit under the fuel ceiling. Matching the Helmholtz draw takes the schedule yield up by a factor of 1663, to a burn fraction of `0.01122`. A zero-resistivity winding removes the ohmic channel and leaves the stored field.
 
-Bosch-Hale reactivity at the confinement-check peak, 3.858 keV, is `5.194e-24` m³/s. At 10 keV it is 21.88 times that value. At 20 keV it is 83.38 times that value. Those factors belong to the reactivity. The ledger is recomputed from the schedule. Temperature on this curve supplies part of the factor of 1663. Confinement time supplies the rest.
+Bosch-Hale reactivity at the confinement-check peak, 3.858 keV, is `5.194e-24` m³/s. At 10 keV it is 21.88 times that value. At 20 keV it is 83.38 times that value. Those factors belong to the reactivity. Production refinement recomputes the schedule integral on this curve and sets the gyro-walk time beside it.
 
 One catalog JET pulse is `5.9e7` J, 800 times this sphere's complete-burn ceiling. Complete fission of one kilogram of Pu-239 in the catalog is `8.072e13` J, and the delivered row at efficiency 0.40 is `3.229e13` J. Complete DT burn is `3.375e14` J per kilogram of fuel, 4.18 times that Pu-239 fission energy density. A JET-class pulse or a fission kilogram takes a larger reacting inventory than the `2.186e-10` kg in this sphere.
 
@@ -271,6 +271,284 @@ Refinement order:
 3. Raise the schedule burn fraction from `6.746e-6` toward `0.0112` on the installed Bosch-Hale curve and the confinement time, and recompute the ledger.
 4. Grow the reacting inventory when the goal is a JET-class pulse or a fission kilogram.
 5. Write the tritium inventory and the 14 MeV neutron account before a larger DT pulse is treated as a safe plant. The p-B11 burn fraction at this peak is `5.820e-17`.
+
+## Production refinement
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.refine
+```
+
+The command writes `runs/production/refinement.md`. The four coil draws stay the supplies locked in `scripts/apply_fsot.py`. Fusion is the Bosch-Hale integral over the checked-in radius schedule. Electricity is escaped alphas at the checked-in converter settings, with `shell_channel` none. `runs/` stays gitignored.
+
+On that schedule the baseline draw remains above the `73778.1` J ceiling, so that store stays closed. The same-B draws sit under the ceiling. Every checked-in net is negative. Direct electric output on the checked-in yield is `0.0137774` J.
+
+Raising the initial temperature along the adiabatic trajectory, with every point kept inside 0.2–100 keV, moves the schedule burn fraction from `6.74595e-06` to `0.00155901` at a 100 keV peak. That yield is `115.021` J. The Helmholtz draw is `827.501` J, and the burn fraction that matches it on this ceiling is `0.0112161`. The schedule remains short of that draw by a factor of `7.19435`.
+
+The gyro-walk yield at that 100 keV peak is `0.0022703` J, below the walk yield at 20 keV (`0.00581869` J). Heating shortens the walk. The confinement time does not close the Helmholtz gap. Peak beta on the checked-in schedule is `2.38876` and rises with temperature. The schedule integral is the prescribed compression.
+
+At the 100 keV burn fraction, one catalog JET pulse takes `0.000112145` kg of DT and one kilogram of complete Pu-239 fission takes `153.435` kg of DT. The checked-in burn fraction would take `0.025917` kg and `35459.5` kg for those same targets. A denser sphere would raise beta, which is already above 1.
+
+The DT neutron in this ledger carries `14.0482` MeV. The checked-in pulse loads `1.31092e-10` kg of tritium and consumes `8.84342e-16` kg, in `1.76609e+11` neutrons. The JET-mass account at the hottest burn fraction loads `6.72438e-05` kg of tritium. The p-B11 burn fraction at the checked-in peak is `5.82048e-17`.
+
+## Failure trace
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.trace
+```
+
+The command writes `runs/production/failure_trace.md`. It loads pin `aeb2adad6e80f487` through the phase-two engine loader and records the domain scalars, K, phi^-4, gamma_FSOT, and the engine valve `2.620867e-17`. Those numbers stay out of the joule product. Plasma beta on the checked-in peak is `2.38876`. The valve and that pressure ratio are different quantities.
+
+The operating converter returns `0.027682` J of electricity per fusion joule: the alpha share `0.201323` times the YAML escape fraction times the YAML direct efficiency. The neutron share is `0.798677`, and `shell_channel` is none. Checked-in electricity is `0.0137774` J against the baseline supply `1.42387e+06` J.
+
+The built shell stores `279035` J/K. The checked-in neutron energy would raise it by `1.42457e-06` K. Complete burn of this sphere would raise it by `0.211174` K. The configured 600 K shell is the heat boundary. The pulse supplies the rises above.
+
+Cooling at fixed density until peak beta is 1 sets the initial temperature to `0.209313` keV. The evolved schedule releases `0.00953724` J. The partner-ion e-folding time at that peak is `9141.59` s beside a gyro-walk of `2.10458e-06` s.
+
+Dividing the density by the raw peak beta, so each hotter trajectory also sits at beta 1, scales the undepleted integral by beta squared. The strongest of those schedules releases `0.299752` J at 20 keV, electric `0.00829772` J. The widest ceiling in that table is the 3.858 keV row: complete-burn electricity `854.971` J, schedule electricity `0.00241447` J, e-folding time `429.19` s. That complete burn sits above the Helmholtz ledger draw `827.501` J and below the practical supply `8517.06` J. The practical supply is the locked ledger plus half of the `15379.1` J Helmholtz store. A zero-resistivity winding leaves the unrecovered store, `7689.56` J. Original-density complete burn at the checked-in converter is `2042.32` J, below that store.
+
+`convert()` with every alpha collected and every neutron joule through the Carnot factor of the configured shell returns `0.600662` J per fusion joule, `21.6987` times the operating product. That cap times complete burn of the widest ceiling is `18551.7` J and sits above the practical supply. The schedule integral on the same row does not. The checked-in ledger keeps the operating product.
+
+At beta 1, density and the complete-burn ceiling scale as B squared, and so does the coil store. The highest complete-burn ratio in the table, electricity over the practical supply, stays `0.100383` at every field that keeps this temperature and beta at 1. On that widest ceiling the burn factor is `354103`, the store factor is `9.96181`, and one e-folding takes `4.87144e+08` walks. The confined schedule remains a net consumer on every beta = 1 row.
+
+## Dominant cost
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.cost
+```
+
+The command writes `runs/production/dominant_cost.md`. The baseline coil store at full current is `2.79337e6` J, above the `73778.1` J fuel ceiling. That is the largest energy in the ranking.
+
+The Helmholtz coil store at the same on-axis field is `15379.1` J. The magnetic energy inside the checked-in plasma is `27.0976` J, so the coils hold `567.545` times the field energy in the fuel. At recovery 0.5 the unrecovered store is `7689.56` J. The ohmic ledger is `827.501` J. Beta = 1 complete-burn electricity is `854.971` J: above the ohmic ledger, below the unrecovered store. The schedule electricity on that load is `0.00241447` J.
+
+The shell inner radius is 0.20 m. A beta = 1 sphere scaled by `2.15169`, initial radius `0.107584` m, meets the practical supply of `8517.06` J on a complete burn. The Helmholtz midplane field at that edge is `0.996268` of the on-axis field. The evolved schedule returns `0.0240525` J of electricity. The gyro-walk returns `8.09453e-05` J.
+
+The bore-limited sphere uses 0.95 of the shell inner radius as its initial radius, the same compression ratio, and the same beta = 1 density. Evolved peak beta is 1. Complete fusion is `1.69475e6` J and complete-burn electricity is `46914` J, above the practical supply and below one catalog JET pulse. Schedule electricity is `0.132487` J. Walk electricity is `0.00139063` J in `1.27221e-05` s. Peak electric power is `109.308` W, and the e-folding time is `429.19` s. The checked-in schedule is not rewritten.
+
+## Surface field
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.surface
+```
+
+The command writes `runs/production/surface_field.md`. A spherical surface current `(3/2) (B / μ0) sinθ` replaces the distant windings. The field inside the sphere is uniform and the field outside is the matching dipole. The stored energy is three halves of the internal magnetic energy. The quadrature of that exterior dipole is `0.500111`.
+
+The shell-wall current sits on the shell inner radius `0.2` m and holds the vacuum field `0.21639` T. Its magnetic energy is `936.493` J, below the Helmholtz store `15379.1` J. At recovery 0.5 the pulsed supply is `468.247` J. The equator current is `258297` A/m. The checked-in compression still raises the field inside the plasma.
+
+The plasma-surface current at radius `0.018` m holds the compressed field `1.66968` T in the plasma volume. Its magnetic energy is `40.6464` J and the pulsed supply is `20.3232` J. The equator current is `1.99303e+06` A/m. Beta = 1 complete-burn electricity is `854.971` J, above that pulsed supply. Schedule electricity is `0.00241447` J, below it. The gyro-walk on that load returns `1.75507e-06` J in `8.81033e-07` s.
+
+The same surface current on the bore-limited sphere, radius `0.0684` m, stores `2230.35` J. The pulsed supply is `1115.17` J. Complete-burn electricity on that sphere is `46914` J, above the pulsed supply. Schedule electricity is `0.132487` J, below it. Walk electricity is `0.00139063` J. Peak electric power is `109.308` W.
+
+A persistent surface current is already established, so the pulse draws no magnetic energy to recharge it. The interior field is uniform, so the parallel clock is the thermal transit. The schedule integral and the gyro-walk remain the cross-field figures. With the field removed, ions cross the `0.018` m sphere at `v = sqrt(kT / m)`. The transit is `4.67829e-08` s and the electricity in that transit is `9.31944e-08` J. The magnetic supply on that arrangement is zero. The checked-in schedule is not rewritten. The distant windings remain the ledger until a surface current is built.
+
+## Nature
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.nature
+```
+
+The command writes `runs/production/nature.md`. The gyro-walk remains the cross-field clock. A particle mirrors along the field only when a throat is stronger than the field it occupies. The isotropic share that misses that throat is `1 - sqrt(1 - 1/R)`.
+
+The beta = 1 sphere is `2.99726` thermal gyroradii across. The bore-limited sphere is `11.3896` thermal gyroradii across. The installed walk is `8.81033e-07` s, electricity `1.75507e-06` J. The thermal transit is `4.67829e-08` s, electricity `9.31944e-08` J.
+
+The four-coil vacuum axis rises by `1.03738` between the midplane and the shell. An isotropic distribution at that vacuum field would lose `0.810182` of its particles. The throat over the compressed internal field is `0.134444`, so the compressed plasma sits above the throat and the internal loss fraction is 1. The Helmholtz axis is strongest at the midplane, vacuum rise `1`, throat over internal `0.1296`. The surface current is uniform inside the sphere, throat over internal `1`, and the dipole axis outside falls as `(a/r)³`. On all three fields an isotropic fuel leaves on the thermal transit. Axial electricity is below the gyro-walk electricity. On the bore-limited sphere the transit is `1.77775e-07` s and its electricity is `1.94323e-05` J, below that sphere's gyro-walk electricity.
+
+Pin `aeb2adad6e80f487` is recorded with the domain scalars. A domain scalar is not a mirror ratio. The engine valve `2.62087e-17` stays out of the mirror ratio. gamma_FSOT does not multiply the walk. The checked-in schedule is not rewritten.
+
+## Throat
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.throat
+```
+
+The command writes `runs/production/throat.md`. The gyro-walk remains the cross-field clock. Half of an isotropic distribution is trapped when the missing share is one half, and the mirror ratio is then 4/3.
+
+The frozen internal field is `1.66968` T. The checked-in coils at peak scale reach `0.896294` of that field. The designed pair is a steady bore winding on the checked-in wire, centerline `0.008` m at `±0.191833` m. That is the smallest centerline the wire allows, against the inner wall. One turn at `9335.05` A holds a throat field of `2.22733` T. The internal field on that current is `1.67049` T. The stored energy is `0.288622` J. At recovery 0.5 the pulsed supply is `0.144311` J. A persistent throat current draws no magnetic energy from the supply. Trapped electricity is `4.38768e-07` J and stays on the gyro-walk.
+
+The ratio-1 row on the same pair stores `0.0165795` J and has no trapped set. The one-tenth loss row stores `28.9011` J. The strongest vacuum rise outside the shell is `6.68754`. At large current that mirror ratio approaches `0.866705`, so a steady pair outside the shell stays below the internal field. A pulsed pair outside the shell stores `65037.3` J to reach the same half-trapped ratio. Checked-in fusion remains `0.497703` J. The checked-in schedule is not rewritten.
+
+## Working plants
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.plants
+```
+
+The command writes `runs/production/plants.md`. The thermal-reactor row is an operating, self-sustaining chain, TRL 9, with continuous external drive set to false. Delivered energy on its reference unit, one kilogram of U-235 fissioned completely, is `2.70929e+13` J at the file efficiency `0.33`. The file ceiling is `0.45`, a headroom of `1.36364`. The fast-reactor row is the operating fast plant, TRL 8, efficiency `0.4` and ceiling `0.5`, delivered `3.22893e+13` J on one kilogram of Pu-239. Its demonstrated efficiency is `1.21212` times the thermal efficiency.
+
+The thermal notes cite `45` GWd per tonne of heavy metal, which is `3.888e+12` J per kilogram of heavy metal. That discharge stands at `0.047357` of the ranked pure-U-235 density. A heavy-metal kilogram and a pure U-235 kilogram are different loads. The enrichment estimate scores against the ranked kilogram: thermal output over that estimate is `752.582`.
+
+Pin `aeb2adad6e80f487` records Nuclear_Physics and Thermodynamics at `0.936388`. A domain scalar is not a plant efficiency. The nuclear scalar stays out of the fission joules. gamma_FSOT does not multiply the plant. The phase-two burnup on the ranked unit is already `1` with a cap of `1`, so the tenfold window is empty. The refinement inside these plants is the file efficiency ceiling, and the fast row already running on the actinides a thermal reactor leaves behind. The checked-in schedule is not rewritten.
+
+## Fission observables
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_observables
+```
+
+The command writes `runs/production/fission_observables.md`. The pinned engine emits eight dimensional nuclear readings. Every one of them is inside the 0.5 percent green gate and, where the row prints a percent tag, inside that tag. The comparison target on that table is the number stored beside the formula.
+
+The published bars are the central values and absolute uncertainties written in the accuracy note. A leaf is installed where that note names one formula. A derived dressing is installed when that dressing sits inside the published bar. The helium-4 leaf residual is `-0.0267531`, the triton leaf residual is `0.129238`, and the proton-moment leaf residual is `-0.236892`. Those three sit inside one uncertainty. The deuteron named-seed windows return three dressings, all inside one uncertainty and all still low: `pi^{-4}` on alpha squared at `-0.838545`, phi on alpha cubed at `-0.382061`, and the square root of e on alpha cubed at `-0.315742`. The suction window holds no named seed. Those are different dressings. Short products of e and phi fill the same windows. The scored deuteron binding is `sqrt(e)+phi^-4` on alpha cubed, residual `-0.000436849`. That dressing also sits inside the mass-excess bar. The mass-excess nearest is a different product, `e^3/phi^5`, and the rounded match is wider than the helium standard `4.23431e-06`. The scored deuteron moment is `sqrt(K)/psi` on alpha squared, residual `0.111115`. It crosses the CODATA central, and its quotient match `5.22163e-06` is wider than the helium standard. The bare moment remains about 21,280 uncertainties low. Both scored readings sit inside one published uncertainty. The wave neutron-proton mass difference is `0.764616` and the wave proton radius is `0.871352`, both inside one uncertainty on the wave formula. The 200 MeV ledger quantum is the plant energy, and no wave result carries it. The channel search stays closed. The checked-in schedule is not rewritten.
+
+## Fission paths
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_paths
+```
+
+The command writes `runs/production/fission_paths.md`. The thermal plant and the thermionic row are the two catalog converters on one kilogram of U-235 fissioned completely. The thermal plant delivers `2.70929e+13` J at efficiency `0.33`. The thermionic row delivers `4.10499e+12` J at efficiency `0.05`, which is `0.151515` of the thermal delivery. Its file ceiling `0.3` still delivers `2.46299e+13` J, below the thermal plant. The fast row stays on its own Pu-239 kilogram. The refinement inside the operating plants is the file efficiency ceiling.
+
+The thermal governing source states that about 85 percent of the released energy starts as fission-fragment kinetic energy, and that in solid fuel the fragments stop in a microscopic distance so the energy becomes heat. Neutron, gamma, and delayed releases add about 30 MeV on a total of about 200 MeV. Subtracting that addendum leaves the share `0.85`. The fragment kinetic inventory on the ranked kilogram is `6.97848e+13` J. That inventory is already inside the ranked density, and it is heat in solid fuel. The catalog files no collector efficiency for a fragment that leaves the fuel. The operating electricity on this kilogram is the Rankine product.
+
+Pin `aeb2adad6e80f487` records Nuclear_Physics at `0.936388`, a relative gap of `0.101632` from the share. The comparison ranks products of pi, e, phi, gamma, and G. The nearest is `G^2` at `0.838993`, relative gap `0.0129494`. The next is `e/pi` at `0.865256`. The page figure is a round share. The nearest seed is not installed as the share. A domain scalar is not the fragment share. The nuclear scalar stays out of the fission joules. gamma_FSOT does not multiply the plant. The checked-in schedule is not rewritten.
+
+## Fission balance
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_balance
+```
+
+The command writes `runs/production/fission_balance.md`. The same physics page assigns the balance, after the fragment kinetic energy, to gamma rays and to neutron kinetic energy. That balance is the `30` MeV addendum, the share `0.15`, and `1.2315e+13` J on the ranked kilogram. Added to the fragment inventory it makes the ranked density. Its electricity at efficiency `0.33` is `4.06394e+12` J, already inside the Rankine product of `2.70929e+13` J. Scoring it again would count the same joules twice.
+
+The catalog files no shield-recovery efficiency. Neutrons and gamma rays that stop outside the coolant stay a shield load. The page's delayed-neutron proportions are `0.66` percent for U-235, `0.27` percent for U-233, and `0.23` percent for Pu-239. Those figures count neutrons. They are the control margin, and the control margin stays in the core.
+
+The file-ceiling headroom on the whole ledger is `9.85198e+12` J. An upper bound that converts the balance at one, and leaves the rest at the demonstrated efficiency, adds `8.25103e+12` J and is not a filed plant. The headroom is larger. The refinement inside the operating plant is the file efficiency ceiling.
+
+The same foundational products put `gamma/pi` nearest the balance, at `0.183733`, relative gap `0.22489`. The complement of the fragment nearest, `1-G^2` at `0.161007`, sits closer, relative gap `0.0733802`, and is not installed. The nearest seed to the U-235 delayed proportion is the same `gamma/pi`, relative gap `26.8384`. The fine-structure leaf is `0.00729735`, relative gap `0.105659` from that proportion. No seed is installed as the balance or as the delayed proportion. The nuclear scalar stays out of the fission joules. The checked-in schedule is not rewritten.
+
+## Fission ceiling
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_ceiling
+```
+
+The command writes `runs/production/fission_ceiling.md`. The thermal ceiling source states a steam cycle near `560` K rejected near `310` K. The Carnot bound of those temperatures is `0.446429`. The catalog ceiling stays `0.45` and sits above that Carnot. The refined bound is the temperature Carnot. On the ranked U-235 kilogram the demonstrated plant delivers `2.70929e+13` J, the temperature Carnot delivers `3.66517e+13` J, and the catalog ceiling delivers `3.69449e+13` J. The step up to the temperature Carnot is `9.55876e+12` J. The catalog ceiling adds `2.93214e+11` J beyond it, and that extra is the round-file margin.
+
+The fast ceiling source states no temperature pair, so the fast catalog ceiling stays `0.5` and that row is not tightened. The nearest seed to the demonstrated efficiency `0.33` is `gamma^2` at `0.333178`, relative gap `0.00963007`. The nearest seed to the temperature Carnot is `phi/pi` at `0.515036`, relative gap `0.153681`. The nearest seed to the fast ceiling is `phi/pi`, relative gap `0.0300724`. The closest of these seeds is still wider than one part in a thousand, so none is installed as an efficiency. The nuclear scalar stays out of the fission joules. The checked-in schedule is not rewritten.
+
+## Fission process
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_process
+```
+
+The command writes `runs/production/fission_process.md`. The operating core is light water, with the chain held at k_eff of 1. The filed power density, `1e+08` W per cubic metre, does not set the joules per kilogram. The catalog carries three loads: the ranked pure U-235 density, an enrichment estimate of `200` SWU at `50` kWh per SWU for one highly enriched kilogram, and a heavy-metal discharge of `45` GWd per tonne.
+
+The association's fuel-cycle overview, at that same 45 GWd/t, 33 percent, and 50 kWh per SWU, spends `182000` SWU on `24.3` tonnes of 4.5 percent enriched uranium. That is `7.48971` SWU per kilogram, and the highly enriched estimate is `26.7033` times that separative work. Discharge electricity on the heavy-metal kilogram is `1.28304e+12` J. The temperature Carnot raises it to `1.73571e+12` J, a step of `1.35281`. The fabrication page carries burn-up past `60` GWd/t as enrichment rises toward a normal plant limit of 5 percent U-235, and the overview anchors 60 GWd/t at about 6.5 percent of the uranium atoms. That burn-up step is `1.33333`. The two steps together are `1.80375`, or `2.31429e+12` J per kilogram of heavy metal, and that stack is not a filed plant. The 60 GWd/t discharge is still `0.0631427` of the ranked pure U-235 density. The fast row remains the filed route for the actinides left behind. The nearest seed to each of these process fractions is `gamma/pi`, and the gaps are wider than one, so no seed is installed. The checked-in schedule is not rewritten.
+
+## Fission safety
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_safety
+```
+
+The command writes `runs/production/fission_safety.md`. Routine cooling is set by the steam efficiency. At `0.33` the plant dumps `7.30909` MJ of heat per kilowatt-hour, the page's round `7.3` MJ. Plants now being built near `0.36` dump `6.4` MJ. The temperature Carnot dumps `4.464` MJ. The heat per kilowatt-hour falls as the efficiency rises.
+
+Fission stops at shutdown and decay heat continues. The cooling page states no fraction for that heat, so none is scored. The page's path is a turbine bypass into the condenser, then residual heat removal, with emergency core cooling if the primary circuit fails. Kept in circulation, that heat ceases to be a problem after a day or two. Large units with a loss of power are the case the page flags. Decay heat stays a cooling load. The delayed-neutron margin stays in the core.
+
+The small class is `300` MWe or less, against the `1000` MWe nameplate. At the filed power density the large core is `30.303` cubic metres and the `300` MWe boundary is `9.09091` cubic metres. If the shape is kept, the linear scale is `0.669433`. A full-power year at that boundary is `9.4608e+15` J, three tenths of the large nameplate year. The joules per kilogram stay on the discharge, and the fuel stays inside the `5` percent fabrication cap. The fast row's sodium barrier is unchanged. The nearest seed to the size ratio `0.3` is `G/pi` at `0.291561`, relative gap `0.0281303`. The nearest seed to `0.36` is `gamma/phi` at `0.356739`, relative gap `0.00905861`. Both gaps are wider than one part in a thousand, so neither is installed. The checked-in schedule is not rewritten.
+
+## Fission decay
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay
+```
+
+The command writes `runs/production/fission_decay.md`. The cooling page states no decay-heat fraction. Equation (2) of Untermyer and Weills, AECD-3454 (25 February 1952), is the calorimetry fit for irradiated uranium. It includes the decay heat of U-239 and Np-239, and it leaves delayed-neutron fission out. The run uses the filed full-power year, `3.1536e+07` s. Operating heat is `3.0303e+09` W on the large nameplate and `9.09091e+08` W on the `300` MWe boundary.
+
+At one second the fit gives `0.0582203` of operating heat, `1.76425e+08` W, inside the report's ±50 percent band. The long-operation limit is `0.0588892`. At one day the fit gives `0.00661589`, `2.00482e+07` W, inside the ±10 percent band. The limit is `0.00728386`. At two days the fit gives `0.0052866`, `1.602e+07` W, inside the same ±10 percent band. The limit is `0.00595368`. The small-class loads are `5.29276e+07` W, `6.01445e+06` W, and `4.806e+06` W.
+
+From one second to one day the one-year load falls to `0.113635` of the one-second load. From one day to two days it falls to `0.799076` of the one-day load. The nearest seed to each scored fraction, and to the one-day ratio, is `gamma/pi`. The nearest seed to the two-day ratio is `G^2` at `0.838993`, relative gap `0.0499534`. That is the closest seed. The gap is wider than one part in a thousand, so no seed is installed. The one-day heat ratio and the U-235 delayed-neutron count of 0.66 percent stay apart, with relative gap `0.00240798`. Decay heat stays a cooling load. The checked-in schedule is not rewritten.
+
+## Fission decay seed
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_seed
+```
+
+The command writes `runs/production/fission_decay_seed.md`. The watts stay the 1952 fit. The naming pass uses the e-and-phi depth-two ladder from the deuteron check, `1224` expressions with `180` inside (0, 1), then the same operations on pi, e, phi, gamma, and G, `7380` expressions with `1395` inside (0, 1). Median spacings are `0.032156` and `0.00349101`.
+
+The one-second fraction tightens from `gamma/pi` at gap `2.15583` to `e^-6+phi^-6` at gap `0.000231991`, and the five-atom nearest is `phi^-6/sqrt(G)` at gap `0.000137647`. The one-day fraction's five-atom nearest is `pi^-4*G^5` at gap `0.000478739`. The two-day fraction's is `pi^-5*phi` at gap `0.000141649`. The one-day drop's is `gamma^3*G^6` at gap `0.000516464`. Those four meet the one-part-in-a-thousand review bar. The one-day limit stays on `e^-3*phi^-4` at gap `0.00274929`. The two-day drop's five-atom nearest is `pi^-3+G^3` at gap `0.00208217`. Every gap stays wider than the helium quotient match `4.23431e-06`. No expression is installed, and the cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
+
+## Fission decay outside
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_outside
+```
+
+The command writes `runs/production/fission_decay_outside.md`. The four figures still outside the five-atom review bar are the one-second limit, the one-day limit, the two-day limit, and the two-day drop. The added operation is the complement of a five-atom piece: `2274` expressions, `1395` distinct values inside (0, 1), median spacing `0.000333282`.
+
+The two-day limit complement is `1-(gamma^6+sqrt(G))` at `0.00595383`, relative gap `2.46138e-05`. The two-day drop complement is `1-(gamma^3/sqrt(G))` at `0.799056`, relative gap `2.538e-05`. Both meet the review bar and stay wider than the helium match `4.23431e-06`, so neither is installed. The one-second limit stays with `pi^-5+phi^-6` at gap `0.00181089`. The one-day limit's closest leaf is the fine-structure value `0.00729735`, gap `0.00185228`. The cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
+
+## Fission decay dress
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_dress
+```
+
+The command writes `runs/production/fission_decay_dress.md`. The two limits the complement left outside are dressed from their five-atom anchors. The factor is the fine-structure leaf `0.00729735` times one base piece, with either sign. Each anchor has `116` such dressings, median spacing `0.000511364`.
+
+The one-second limit's nearest is `(pi^-5+phi^-6)*(1-alpha*phi^-3)` at `0.0588942`, relative gap `8.50946e-05`. Seven dressings of that anchor meet the review bar, and one is inside one part in ten thousand. The one-day limit's nearest is `(e^-3*phi^-4)*(1+alpha*phi^-2)` at `0.00728408`, relative gap `3.03874e-05`. Two dressings of that anchor meet the review bar, and one is inside one part in ten thousand. Both gaps stay wider than the helium match `4.23431e-06`, so neither dressing is installed. The cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
+
+## Fission decay recorded
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_recorded
+```
+
+The command writes `runs/production/fission_decay_recorded.md`. The six figures the first dressing left untouched already had a recorded nearest inside the review bar. The bare value is that nearest. The factor is the same fine-structure leaf `0.00729735` times one base piece, with either sign. The two limits already dressed stay on that score.
+
+The one-second fraction's nearest is `(phi^-6/sqrt(G))*(1-alpha*e^-4)`, relative gap `3.97292e-06`. The two-day limit's nearest is `(1-(gamma^6+sqrt(G)))*(1-alpha*pi^-5)`, relative gap `7.67233e-07`. The two-day drop's nearest is `(1-(gamma^3/sqrt(G)))*(1+alpha*pi^-5)`, relative gap `1.53457e-06`. Those three meet the helium match `4.23431e-06`. One dressing of each of those anchors meets that match.
+
+The one-day fraction's nearest is `(pi^-4*G^5)*(1-alpha*gamma^5)`, relative gap `1.0935e-05`. The two-day fraction's nearest is `(pi^-5*phi)*(1-alpha*e^-4)`, relative gap `7.97431e-06`. The one-day drop's nearest is `(gamma^3*G^6)*(1+alpha*gamma^5)`, relative gap `4.91253e-05`. Those three stay wider than the helium match. No expression is installed as a decay-heat fraction. The cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
+
+## Fission decay open
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_open
+```
+
+The command writes `runs/production/fission_decay_open.md`. The five figures still wider than the helium match take the same base-piece factor again. Every added anchor has `116` dressings, median spacing `0.000511364`.
+
+The one-day fraction closes as `((pi^-4*G^5)*(1-alpha*gamma^5))*(1-alpha*pi^-6)`, relative gap `3.34448e-06`. The two-day fraction closes as `((pi^-5*phi)*(1-alpha*e^-4))*(1-alpha*pi^-6)`, relative gap `3.83823e-07`. The one-day drop closes as `((gamma^3*G^6)*(1+alpha*gamma^5))*(1+alpha*e^-5)`, relative gap `4.14453e-08`. The one-second limit needs one factor that stays wider, `((pi^-5+phi^-6)*(1-alpha*phi^-3))*(1-alpha*pi^-4)` at gap `1.01737e-05`, then closes as `(((pi^-5+phi^-6)*(1-alpha*phi^-3))*(1-alpha*pi^-4))*(1-alpha*pi^-6)`, relative gap `2.58319e-06`. The one-day limit needs `((e^-3*phi^-4)*(1+alpha*phi^-2))*(1-alpha*pi^-5)` at gap `6.54067e-06`, then closes as `(((e^-3*phi^-4)*(1+alpha*phi^-2))*(1-alpha*pi^-5))*(1-alpha*pi^-6)`, relative gap `1.0498e-06`.
+
+`pi^-6` closes four of the five with a minus sign. `e^-5` closes the one-day drop with a plus sign. One dressing of each closing anchor meets the helium match `4.23431e-06`. No expression is installed as a decay-heat fraction. The cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
 
 ## Tests
 
