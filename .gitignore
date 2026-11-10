@@ -8,7 +8,11 @@ __pycache__/
 venv/
 dist/
 build/
-runs/
+# Simulation output stays local. The production score files are tracked.
+runs/*
+!runs/production/
+runs/production/*
+!runs/production/*.md
 *.h5
 statepoint.*
 summary.h5

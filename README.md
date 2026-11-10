@@ -550,6 +550,18 @@ The one-day fraction closes as `((pi^-4*G^5)*(1-alpha*gamma^5))*(1-alpha*pi^-6)`
 
 `pi^-6` closes four of the five with a minus sign. `e^-5` closes the one-day drop with a plus sign. One dressing of each closing anchor meets the helium match `4.23431e-06`. No expression is installed as a decay-heat fraction. The cooling loads remain `1.76425e+08` W, `2.00482e+07` W, and `1.602e+07` W. The checked-in schedule is not rewritten.
 
+## Fission decay load
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_decay_load
+```
+
+The command writes `runs/production/fission_decay_load.md`. The cooling load is the helium-tight FSOT fraction times the filed operating heat. That heat is the nameplate divided by the filed efficiency, `3.0303e+09` W on the large nameplate and `9.09091e+08` W on the small-class boundary. The 1952 fit remains the calorimetry witness.
+
+The one-second load is `(phi^-6/sqrt(G))*(1-alpha*e^-4)` times that heat, `1.76426e+08` W, against the fit `1.76425e+08` W. The one-day load is `((pi^-4*G^5)*(1-alpha*gamma^5))*(1-alpha*pi^-6)`, `2.00482e+07` W at six figures. The two-day load is `((pi^-5*phi)*(1-alpha*e^-4))*(1-alpha*pi^-6)`, `1.602e+07` W at six figures. The small-class loads are `5.29278e+07` W, `6.01447e+06` W, and `4.80601e+06` W. The fraction gaps are `3.97292e-06`, `3.34448e-06`, and `3.83823e-07`. The ratio of the derived one-day load to the derived one-second load is `0.113635`, gap `6.28438e-07`. The ratio of the derived two-day load to the derived one-day load is `0.799074`, gap `2.96064e-06`. Every gap meets the helium match `4.23431e-06`. Decay heat stays a cooling load. The checked-in schedule is not rewritten.
+
 ## Tests
 
 ```bash
