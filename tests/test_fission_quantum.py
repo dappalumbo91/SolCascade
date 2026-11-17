@@ -144,8 +144,8 @@ def test_report_names_the_file_quantum(report):
     assert "fission_quantum" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 96" in lean
+    assert "installedClosings.length = 97" in lean
     assert "((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)" in lean
     assert "fission_quantum" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 96", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 97", "pairs 4", "miss 0", "fails 0"]

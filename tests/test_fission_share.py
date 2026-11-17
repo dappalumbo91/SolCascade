@@ -180,7 +180,7 @@ def test_report_names_the_existing_target(report):
     assert "fission_share" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 96" in lean
+    assert "installedClosings.length = 97" in lean
     assert "theorem kept_built_share" in lean
     assert "theorem kept_demonstrated_share" in lean
     assert "theorem closed_share" in lean
@@ -189,4 +189,4 @@ def test_report_names_the_existing_target(report):
     assert "theorem unused_demonstrated_share" in lean
     assert "fission_share" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 96", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 97", "pairs 4", "miss 0", "fails 0"]

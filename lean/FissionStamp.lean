@@ -8,8 +8,9 @@ import Mathlib.Tactic.NormNum
 /-
 Fission stamp. Not part of `lean_lib FSOT`.
 
-The rational plant figures are proved here. Each installed closing, each held
-pair, and the four-hour year share are Octave obligations. The Octave log
+The rational plant figures are proved here. Each installed closing and each held
+pair are Octave obligations. The four-hour year share is an installed closing.
+Four factors stay wider, and the fifth meets the helium match. The Octave log
 recomputes the expressions from the pinned seeds. A page formula is not this
 stamp. The tails percent and the tails fraction are installed closings. The
 steam-share quotients and the electricity gains are rationals of the named
@@ -230,6 +231,8 @@ theorem aside_candu_burnup : (75 : ℚ) / 10 / 45 = 1 / 6 := by norm_num
 
 theorem aside_candu_per_twh : (157 : ℚ) * 1000 / 8760 = 3925 / 219 := by norm_num
 
+theorem year_share : (4 : ℚ) / 8760 = 1 / 2190 := by norm_num
+
 /-- Octave discharges one closing string per installed unique match. -/
 def installedClosings : List String := [
   "(phi^-6/sqrt(G))*(1-alpha*e^-4)",
@@ -327,10 +330,11 @@ def installedClosings : List String := [
   "((((G^5*G^6)*(1-alpha*phi^-3))*(1-alpha*e^-3))*(1+alpha*e^-5))*(1-alpha*pi^-6)",
   "(((phi^-3/sqrt(gamma))*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1-alpha*e^-6)",
   "(((e^5+gamma^-4)*(1-alpha*phi^-2))*(1+alpha*e^-4))*(1-alpha*pi^-5)",
-  "((e^5*sqrt(G))*(1-alpha*gamma^6))*(1-alpha*e^-6)"
+  "((e^5*sqrt(G))*(1-alpha*gamma^6))*(1-alpha*e^-6)",
+  "(((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6))*(1+alpha*pi^-6)"
 ]
 
-theorem installed_closing_count : installedClosings.length = 96 := rfl
+theorem installed_closing_count : installedClosings.length = 97 := rfl
 
 /-- Both routes stay. The stamp does not choose. -/
 def heldRoutes : List (String × String × String) := [
@@ -341,16 +345,6 @@ def heldRoutes : List (String × String × String) := [
 ]
 
 theorem held_route_count : heldRoutes.length = 4 := rfl
-
-/-- Octave discharges this chain. The fourth gap stays wider than the helium match. -/
-def yearShareMiss : List String := [
-  "(pi^-5*e^-2)*(1+alpha*phi^3)",
-  "((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3)",
-  "(((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4)",
-  "((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6)"
-]
-
-theorem year_share_step_count : yearShareMiss.length = 4 := rfl
 
 /-
 The catalog ceiling, the atomic percent, the burnup ratio, the stack, the higher

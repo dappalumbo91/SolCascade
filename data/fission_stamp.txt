@@ -96,12 +96,12 @@ aside_candu_plutonium named gap 3.168301e-06 factors 4 count 116
 aside_candu_efficiency named gap 1.556160e-06 factors 3 count 116
 aside_candu_demand named gap 4.654031e-08 factors 3 count 116
 aside_candu_capacity named gap 3.314961e-06 factors 2 count 116
+year_share named gap 2.557838e-06 factors 5 count 116
 removal_one_day_pair held e 2.578493e-06 pi 3.179321e-06
 margin_proportion_pair held e 2.560388e-06 pi 3.197188e-06
 stack_fraction_pair held e 1.987097e-06 pi 3.770713e-06
 filed_rejected held e 3.283777e-06 pi 2.474041e-06
-year_share miss gap 5.032548e-06
-closes 96
+closes 97
 pairs 4
-miss 1
+miss 0
 fails 0

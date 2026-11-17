@@ -2,7 +2,7 @@
 % Recompute each installed closing from the pinned seeds.
 % A unique close meets the helium quotient match, and the next dressing stays wider.
 % The four held pairs keep both routes.
-% The four-hour year share stays outside that match.
+% The four-hour year share is an installed close. Four factors stay wider.
 % The file ledger quantum is an installed close.
 % The comparison column's printed quotients are installed closes and stay unrun.
 % The Red Book figures off that column and the CANDU figures are installed closes.
@@ -131,14 +131,14 @@ fails = check_close(fid, fails, S, base_names, base_values, helium, 'aside_candu
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'aside_candu_efficiency', 0.31, 'positive', 116, false, {'(phi^-3/sqrt(gamma))*(1-alpha*gamma^2)' '((phi^-3/sqrt(gamma))*(1-alpha*gamma^2))*(1+alpha*e^-4)' '(((phi^-3/sqrt(gamma))*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1-alpha*e^-6)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'aside_candu_demand', 157, 'positive', 116, false, {'(e^5+gamma^-4)*(1-alpha*phi^-2)' '((e^5+gamma^-4)*(1-alpha*phi^-2))*(1+alpha*e^-4)' '(((e^5+gamma^-4)*(1-alpha*phi^-2))*(1+alpha*e^-4))*(1-alpha*pi^-5)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'aside_candu_capacity', 142, 'positive', 116, false, {'(e^5*sqrt(G))*(1-alpha*gamma^6)' '((e^5*sqrt(G))*(1-alpha*gamma^6))*(1-alpha*e^-6)'});
+fails = check_close(fid, fails, S, base_names, base_values, helium, 'year_share', 0.00045662100456621003, 'unit', 116, false, {'(pi^-5*e^-2)*(1+alpha*phi^3)' '((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3)' '(((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4)' '((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6)' '(((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6))*(1+alpha*pi^-6)'});
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'removal_one_day_pair', 1.7697019567375738, 'positive', '(sqrt(pi)-e^-6)*(1-alpha*e^-4)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*e^-6)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'margin_proportion_pair', 0.0027000000000000001, 'unit', '((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*e^-6)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'stack_fraction_pair', 0.044999999999999998, 'unit', '((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*e^-6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'filed_rejected', 0.5535714285714286, 'positive', '((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*e^-6)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*pi^-5)');
-fails = check_miss(fid, fails, S, base_names, base_values, helium, 0.00045662100456621003, {'(pi^-5*e^-2)*(1+alpha*phi^3)' '((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3)' '(((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4)' '((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6)'});
-fprintf(fid, 'closes %d\n', 96);
+fprintf(fid, 'closes %d\n', 97);
 fprintf(fid, 'pairs %d\n', 4);
-fprintf(fid, 'miss 1\n');
+fprintf(fid, 'miss 0\n');
 fprintf(fid, 'fails %d\n', fails);
 fclose(fid);
 if fails > 0
@@ -415,25 +415,4 @@ end
 fprintf(fid, '%s held e %.6e pi %.6e\n', ident, e_gap, pi_gap);
 endfunction
 
-function fails = check_miss(fid, fails, S, base_names, base_values, helium, target, steps)
-anchor = parent_anchor(steps{1});
-final_gap = 0;
-for index = 1:length(steps)
-  [names, values] = dressings(anchor, evaluate(anchor, S), S.alpha, base_names, base_values, 'unit');
-  gaps = abs(values - target) ./ abs(target);
-  [~, order] = sortrows([gaps(:), (1:length(gaps))']);
-  best = order(1);
-  inside = sum(gaps <= helium);
-  spacing = median_spacing(values);
-  final_gap = gaps(best);
-  ok = strcmp(names{best}, steps{index}) && inside == 0 && length(names) == 116;
-  ok = ok && abs(spacing - 0.000511364) < 2e-9 && final_gap > helium;
-  if ~ok
-    fails = fails + 1;
-    fprintf(fid, 'FAIL year_share step %d inside %d gap %.6e count %d spacing %.12e\n', index, inside, final_gap, length(names), spacing);
-  end
-  anchor = steps{index};
-end
-fprintf(fid, 'year_share miss gap %.6e\n', final_gap);
-endfunction
 

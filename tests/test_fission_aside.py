@@ -212,7 +212,7 @@ def test_report_keeps_the_unrun_rows_and_the_shared_names(report):
     assert "fission_aside" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 96" in lean
+    assert "installedClosings.length = 97" in lean
     for closing in _CLOSINGS.values():
         assert closing in lean
     for name in (
@@ -242,7 +242,11 @@ def test_report_keeps_the_unrun_rows_and_the_shared_names(report):
     assert "fission_reject" not in lean
     assert "fission_quantum" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 96", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 97", "pairs 4", "miss 0", "fails 0"]
+    assert "theorem year_share :" in lean
+    assert "(((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6))*(1+alpha*pi^-6)" in lean
+    assert any(line.startswith("year_share named ") for line in log)
+    assert not any("year_share miss" in line for line in log)
     unrun = [line for line in log if " unrun " in line]
     assert [line.split()[0] for line in unrun] == [
         "bounds_ceiling",
