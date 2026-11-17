@@ -13,7 +13,9 @@ pair, and the four-hour year share are Octave obligations. The Octave log
 recomputes the expressions from the pinned seeds. A page formula is not this
 stamp. The tails percent and the tails fraction are installed closings. The
 steam-share quotients and the electricity gains are rationals of the named
-steps. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay
+steps. The operating feed quotients are installed closings. The comparison
+column's feed multiple is a rational of the printed masses and stays unrun.
+The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay
 unrun. Domain scalars stay out of the joules.
 -/
 
@@ -133,6 +135,26 @@ theorem gain_order :
   unfold builtEff demonstrated carnot burnupStep
   norm_num
 
+theorem feed_multiple : (211 : ℚ) * 10 / 243 = 2110 / 243 := by norm_num
+
+theorem feed_per_twh : (211 : ℚ) * 1000000 / (1000 * 8760) = 5275 / 219 := by norm_num
+
+theorem feed_concentrate : (211 : ℚ) / 249 = 211 / 249 := by norm_num
+
+theorem feed_hex : (211 : ℚ) / 312 = 211 / 312 := by norm_num
+
+theorem feed_enriched_hex : (243 : ℚ) / 359 = 243 / 359 := by norm_num
+
+theorem feed_oxide : (243 : ℚ) / 276 = 81 / 92 := by norm_num
+
+theorem feed_core : (243 : ℚ) / 730 = 243 / 730 := by norm_num
+
+theorem feed_transuranic : (280 : ℚ) / 27600 = 7 / 690 := by norm_num
+
+theorem feed_compare : (163 : ℚ) * 20 / 337 = 3260 / 337 := by norm_num
+
+theorem feed_compare_order : (3260 : ℚ) / 337 > 2110 / 243 := by norm_num
+
 /-- Octave discharges one closing string per installed unique match. -/
 def installedClosings : List String := [
   "(phi^-6/sqrt(G))*(1-alpha*e^-4)",
@@ -204,10 +226,18 @@ def installedClosings : List String := [
   "((G*G^-2)*(1-alpha*pi^-2))*(1-alpha*pi^-5)",
   "((((e^-3+G^-2)*(1-alpha*gamma^3))*(1+alpha*e^-4))*(1-alpha*pi^-5))*(1-alpha*pi^-6)",
   "((phi^-2*gamma)*(1-alpha*gamma^2))*(1+alpha*gamma^6)",
-  "(((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)"
+  "(((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)",
+  "(((pi^2-G^-2)*(1+alpha*phi^-5))*(1-alpha*pi^-5))*(1-alpha*pi^-6)",
+  "((pi^3-phi^4)*(1-alpha*phi^-2))*(1+alpha*pi^-4)",
+  "((e^-5+G^2)*(1+alpha*phi^-3))*(1+alpha*pi^-3)",
+  "((pi^-3+G^5)*(1-alpha*phi^-4))*(1-alpha*pi^-6)",
+  "((pi^-3+G^5)*(1-alpha*pi^-3))*(1+alpha*e^-5)",
+  "((sqrt(e)-G^3)*(1+alpha*pi^-3))*(1-alpha*pi^-6)",
+  "(((gamma*gamma)*(1-alpha*e^-2))*(1+alpha*pi^-4))*(1+alpha*pi^-6)",
+  "((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)"
 ]
 
-theorem installed_closing_count : installedClosings.length = 70 := rfl
+theorem installed_closing_count : installedClosings.length = 78 := rfl
 
 /-- Both routes stay. The stamp does not choose. -/
 def heldRoutes : List (String × String × String) := [

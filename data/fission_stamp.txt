@@ -70,12 +70,20 @@ built_built_step named gap 1.602786e-06 factors 2 count 116
 built_carnot_step named gap 2.449745e-06 factors 4 count 116
 tails_percent named gap 3.503544e-07 factors 2 count 116
 tails_fraction named gap 3.620526e-06 factors 3 count 116
+feed_multiple named gap 1.001579e-06 factors 3 count 116
+feed_per_twh named gap 4.123037e-06 factors 2 count 116
+feed_concentrate named gap 2.760033e-06 factors 2 count 116
+feed_hex named gap 2.537092e-07 factors 2 count 116
+feed_enriched_hex named gap 2.760984e-06 factors 2 count 116
+feed_oxide named gap 1.959692e-06 factors 2 count 116
+feed_core named gap 1.110342e-06 factors 3 count 116
+feed_transuranic named gap 2.368291e-06 factors 2 count 116
 removal_one_day_pair held e 2.578493e-06 pi 3.179321e-06
 margin_proportion_pair held e 2.560388e-06 pi 3.197188e-06
 stack_fraction_pair held e 1.987097e-06 pi 3.770713e-06
 filed_rejected held e 3.283777e-06 pi 2.474041e-06
 year_share miss gap 5.032548e-06
-closes 70
+closes 78
 pairs 4
 miss 1
 fails 0
