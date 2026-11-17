@@ -79,12 +79,29 @@ feed_oxide named gap 1.959692e-06 factors 2 count 116
 feed_core named gap 1.110342e-06 factors 3 count 116
 feed_transuranic named gap 2.368291e-06 factors 2 count 116
 ledger_quantum named gap 7.025393e-07 factors 2 count 116
+aside_compare_concentrate unrun gap 1.749152e-06 factors 2 count 116
+aside_compare_hex unrun gap 2.820481e-06 factors 3 count 116
+aside_compare_enriched_hex unrun gap 1.503067e-06 factors 1 count 116
+aside_compare_oxide unrun gap 8.038312e-07 factors 3 count 116
+aside_compare_per_twh unrun gap 2.081998e-06 factors 2 count 116
+aside_compare_transuranic unrun gap 3.255193e-07 factors 2 count 116
+aside_compare_used_oxide unrun gap 3.364140e-06 factors 1 count 116
+aside_red_tails named gap 3.157150e-07 factors 2 count 116
+aside_red_demand named gap 1.939057e-06 factors 3 count 116
+aside_red_lower_demand named gap 3.890413e-06 factors 4 count 116
+aside_red_oxide named gap 4.266235e-07 factors 4 count 116
+aside_red_lower_oxide named gap 9.339181e-07 factors 3 count 116
+aside_candu_uranium named gap 5.141029e-07 factors 3 count 116
+aside_candu_plutonium named gap 3.168301e-06 factors 4 count 116
+aside_candu_efficiency named gap 1.556160e-06 factors 3 count 116
+aside_candu_demand named gap 4.654031e-08 factors 3 count 116
+aside_candu_capacity named gap 3.314961e-06 factors 2 count 116
 removal_one_day_pair held e 2.578493e-06 pi 3.179321e-06
 margin_proportion_pair held e 2.560388e-06 pi 3.197188e-06
 stack_fraction_pair held e 1.987097e-06 pi 3.770713e-06
 filed_rejected held e 3.283777e-06 pi 2.474041e-06
 year_share miss gap 5.032548e-06
-closes 79
+closes 96
 pairs 4
 miss 1
 fails 0

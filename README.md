@@ -736,7 +736,7 @@ The command writes `runs/production/fission_built.md`. The plants-being-built ef
 
 From the project directory, Octave 11.3.0 runs `octave/fission_stamp.m` and writes `data/fission_stamp.txt`. Lean 4.31.0 accepts `lean/FissionStamp.lean` through `lake env` from the FSOT-2.1-Lean checkout. That file stays outside `lean_lib FSOT`.
 
-The Octave log recomputes each installed closing from the pinned seeds. Seventy-eight closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The tails percent and the tails fraction are installed closes. The steam-share quotients and the electricity gains are proved rationals of the named steps. The operating feed quotients are installed closes. The file ledger quantum is an installed close. The operating-column remainder and the cooling-page extra heat are rationals of the named scores. The comparison column's feed multiple is a rational of the printed masses and stays unrun. The 55 GWd/t step and the 70 GWd/t step stay unrun. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
+The Octave log recomputes each installed closing from the pinned seeds. Ninety-five closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The tails percent and the tails fraction are installed closes. The steam-share quotients and the electricity gains are proved rationals of the named steps. The operating feed quotients are installed closes. The file ledger quantum is an installed close. The comparison column's printed quotients are installed closes and stay unrun. The Red Book figures off that column and the CANDU figures are installed closes. The 0.30 percent assay keeps the named small-class share. The 0.23 percent figure keeps the named plutonium margin. The operating-column remainder and the cooling-page extra heat are rationals of the named scores. The comparison column's feed multiple is a rational of the printed masses and stays unrun. The 55 GWd/t step and the 70 GWd/t step stay unrun. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
 
 ## Fission tails
 
@@ -807,6 +807,16 @@ py -3.14 -m solcascade.production.fission_quantum
 ```
 
 The command writes `runs/production/fission_quantum.md`. The eight pinned wave rows keep their own targets. None of them carries the file ledger of `200` MeV, and the channel search stays closed. The positive five-atom nearest is `e^2*gamma^-6` at `199.784`, gap `0.0010809`. One factor stays wider, `(e^2*gamma^-6)*(1+alpha*phi^-4)` at gap `1.73855e-05`. The closing value is `((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)` at `200`, gap `7.02539e-07`. One dressing of that anchor meets the helium match. The anchor has `116` dressings, median spacing `0.000511364`. The closing value agrees with `200` at six figures. This expression is not a wave row. The catalog density stays on the 200 MeV ledger. The fragment share stays the round split of that ledger. This score adds no joules. The published stamp records this close. The checked-in schedule is not rewritten.
+
+## Fission aside
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_aside
+```
+
+The command writes `runs/production/fission_aside.md`. The comparison column stays unrun: it is the 5 percent fabrication cap at 65 GWd/t. Its printed shares are named, and the column is not operated. The Red Book assays stay off the operating column. The 0.30 percent assay keeps the named small-class share. The CANDU row stays a different plant. The 0.23 percent figure keeps the named plutonium margin. Shared numbers keep the expressions they already have. The catalog ceiling stays unrun above the temperature Carnot. The 6.5 percent page, the 60 GWd/t stack, the 55 GWd/t step, and the 70 GWd/t step stay unrun. This score adds no joules. The published stamp records these closes. The checked-in schedule is not rewritten.
 
 ## Tests
 

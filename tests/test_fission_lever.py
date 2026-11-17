@@ -172,7 +172,7 @@ def test_report_ranks_the_gains(report):
     assert "fission_lever" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 79" in lean
+    assert "installedClosings.length = 96" in lean
     assert "theorem published_gain" in lean
     assert "theorem remaining_gain" in lean
     assert "theorem gain_ratio" in lean
@@ -182,4 +182,4 @@ def test_report_ranks_the_gains(report):
     assert "theorem gain_order" in lean
     assert "fission_lever" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 79", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 96", "pairs 4", "miss 1", "fails 0"]

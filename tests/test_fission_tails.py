@@ -217,9 +217,9 @@ def test_report_names_the_tails(report):
     assert "fission_tails" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 79" in lean
+    assert "installedClosings.length = 96" in lean
     assert "((phi^-2*gamma)*(1-alpha*gamma^2))*(1+alpha*gamma^6)" in lean
     assert "(((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)" in lean
     assert "fission_tails" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 79", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 96", "pairs 4", "miss 1", "fails 0"]

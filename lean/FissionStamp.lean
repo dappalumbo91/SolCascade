@@ -17,7 +17,11 @@ steps. The operating feed quotients are installed closings. The comparison
 column's feed multiple is a rational of the printed masses and stays unrun.
 The file ledger quantum is an installed closing. The operating-column
 remainder and the cooling-page extra heat are rationals of the named scores.
-The 55 GWd/t step and the 70 GWd/t step stay unrun.
+The comparison column's printed quotients are installed closings and stay
+unrun. The Red Book figures off that column and the CANDU figures are
+installed closings. The 0.30 percent assay keeps the named small-class
+share. The 0.23 percent figure keeps the named plutonium margin. The 55
+GWd/t step and the 70 GWd/t step stay unrun.
 The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay
 unrun. Domain scalars stay out of the joules.
 -/
@@ -188,6 +192,44 @@ theorem reject_extra : (201 : ℚ) / 176 - 1 = 25 / 176 := by norm_num
 
 theorem reject_over_gain : (25 : ℚ) / 176 / (1 / 11) = 25 / 16 := by norm_num
 
+theorem aside_compare_concentrate : (163 : ℚ) / 192 = 163 / 192 := by norm_num
+
+theorem aside_compare_hex : (163 : ℚ) / 241 = 163 / 241 := by norm_num
+
+theorem aside_compare_enriched_hex : (1685 : ℚ) / 2500 = 337 / 500 := by norm_num
+
+theorem aside_compare_oxide : (1685 : ℚ) / 1910 = 337 / 382 := by norm_num
+
+theorem aside_compare_per_twh : (163 : ℚ) * 1000 / 8760 = 4075 / 219 := by norm_num
+
+theorem aside_compare_transuranic : (200 : ℚ) / 19100 = 2 / 191 := by norm_num
+
+theorem aside_compare_used_oxide : (183 : ℚ) / 191 = 183 / 191 := by norm_num
+
+theorem aside_compare_burnup : (65 : ℚ) / 45 = 13 / 9 := by norm_num
+
+theorem aside_red_fraction : (30 : ℚ) / 100 / 100 = 3 / 1000 := by norm_num
+
+theorem aside_red_tails : (25 : ℚ) / 100 = 1 / 4 := by norm_num
+
+theorem aside_red_tails_fraction : (1 : ℚ) / 4 / 100 = 1 / 400 := by norm_num
+
+theorem aside_red_high_share : (175 : ℚ) / 206 = 175 / 206 := by norm_num
+
+theorem aside_red_low_share : (160 : ℚ) / 189 = 160 / 189 := by norm_num
+
+theorem aside_candu_uranium : (988 : ℚ) / 10 = 494 / 5 := by norm_num
+
+theorem aside_candu_plutonium : (38 : ℚ) / 100 = 19 / 50 := by norm_num
+
+theorem aside_candu_plutonium_fraction : (38 : ℚ) / 100 / 100 = 19 / 5000 := by norm_num
+
+theorem aside_candu_efficiency : (31 : ℚ) / 100 = 31 / 100 := by norm_num
+
+theorem aside_candu_burnup : (75 : ℚ) / 10 / 45 = 1 / 6 := by norm_num
+
+theorem aside_candu_per_twh : (157 : ℚ) * 1000 / 8760 = 3925 / 219 := by norm_num
+
 /-- Octave discharges one closing string per installed unique match. -/
 def installedClosings : List String := [
   "(phi^-6/sqrt(G))*(1-alpha*e^-4)",
@@ -268,10 +310,27 @@ def installedClosings : List String := [
   "((sqrt(e)-G^3)*(1+alpha*pi^-3))*(1-alpha*pi^-6)",
   "(((gamma*gamma)*(1-alpha*e^-2))*(1+alpha*pi^-4))*(1+alpha*pi^-6)",
   "((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)",
-  "((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)"
+  "((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)",
+  "((pi^-4+G^2)*(1-alpha*e^-3))*(1+alpha*pi^-6)",
+  "(((pi^-3+G^5)*(1-alpha*e^-2))*(1+alpha*e^-6))*(1-alpha*pi^-6)",
+  "(sqrt(G)*G^4)*(1+alpha*gamma^5)",
+  "(((phi^-3+G^5)*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-5)",
+  "((gamma^-2+gamma^-5)*(1-alpha*e^-5))*(1+alpha*pi^-6)",
+  "((e^-5*G^-5)*(1+alpha*phi^-3))*(1+alpha*gamma^6)",
+  "(pi^-6+sqrt(G))*(1+alpha*e^-6)",
+  "((gamma^3*G^-3)*(1-alpha*e^-2))*(1-alpha*e^-6)",
+  "(((e^5+gamma^-6)*(1-alpha*gamma^2))*(1-alpha*e^-4))*(1-alpha*pi^-6)",
+  "((((e^5+phi^5)*(1+alpha*phi^-2))*(1+alpha*e^-3))*(1-alpha*e^-5))*(1+alpha*pi^-6)",
+  "((((e^4+e^5)*(1+alpha*sqrt(pi)))*(1+alpha*phi^-3))*(1+alpha*e^-5))*(1-alpha*pi^-6)",
+  "(((pi^5/phi)*(1-alpha*phi^-5))*(1-alpha*pi^-5))*(1-alpha*pi^-6)",
+  "(((pi^4+G^-4)*(1-alpha*gamma^6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)",
+  "((((G^5*G^6)*(1-alpha*phi^-3))*(1-alpha*e^-3))*(1+alpha*e^-5))*(1-alpha*pi^-6)",
+  "(((phi^-3/sqrt(gamma))*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1-alpha*e^-6)",
+  "(((e^5+gamma^-4)*(1-alpha*phi^-2))*(1+alpha*e^-4))*(1-alpha*pi^-5)",
+  "((e^5*sqrt(G))*(1-alpha*gamma^6))*(1-alpha*e^-6)"
 ]
 
-theorem installed_closing_count : installedClosings.length = 79 := rfl
+theorem installed_closing_count : installedClosings.length = 96 := rfl
 
 /-- Both routes stay. The stamp does not choose. -/
 def heldRoutes : List (String × String × String) := [
@@ -295,7 +354,8 @@ theorem year_share_step_count : yearShareMiss.length = 4 := rfl
 
 /-
 The catalog ceiling, the atomic percent, the burnup ratio, the stack, the higher
-burnup, and the stack electric are installed closings that stay unrun.
+burnup, and the stack electric are installed closings that stay unrun. The
+comparison column's printed quotients are installed closings that stay unrun.
 -/
 
 end FissionStamp
