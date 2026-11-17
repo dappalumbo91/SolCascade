@@ -692,6 +692,52 @@ py -3.14 -m solcascade.production.fission_condenser
 
 The command writes `runs/production/fission_condenser.md`. The one-second condenser share `0.0868964` closes as `((e^-3+gamma^6)*(1+alpha*gamma^3))*(1+alpha*pi^-5)`, gap `2.42235e-06`. The one-day share `0.0098745` closes as `(((pi^-4*sqrt(G))*(1+alpha*G^4))*(1-alpha*e^-4))*(1+alpha*e^-6)`, gap `1.55663e-07`. The two-day share `0.00789046` closes as `((pi^-4*G^3)*(1+alpha*e^-4))*(1+alpha*e^-6)`, gap `4.09621e-06`. The small-class shares match. The four-hour load is `2.95543` times the scaled design-point duty and closes on the first factor as `(e+phi^-3)*(1+alpha*e^-3)`, gap `2.49663e-06`. The twenty-hour load is `1.87181` times that duty and closes as `((G+sqrt(G))*(1-alpha*phi^-5))*(1+alpha*pi^-6)`, gap `1.24679e-06`. Both stay above the design-point duty. The small-class linear scale `0.669433` is the cube root of the named share `0.3`. Its unit-interval dressing drops below 116 values. The positive dressing closes as `(((phi^-5+gamma)*(1+alpha*phi^-2))*(1+alpha*gamma^6))*(1+alpha*pi^-6)`, gap `2.09642e-06`. Each anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. Decay heat stays a cooling load. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
 
+## Fission thermionic
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_thermionic
+```
+
+The command writes `runs/production/fission_thermionic.md`. The thermionic efficiency is the fabrication cap, and the thermionic ceiling is the small-class share. One expression names each shared number. The delivered ratio `0.151515` closes as `(((e*phi^-6)*(1+alpha*pi^-3))*(1-alpha*pi^-5))*(1-alpha*pi^-6)`, gap `2.58504e-06`. The enrichment return `114.028` closes as `((e^5*G^3)*(1-alpha*pi^-3))*(1+alpha*pi^-6)`, gap `3.08309e-06`. The headroom `6` closes on the first factor as `(gamma^-2+gamma^-2)*(1-alpha*gamma^5)`, gap `1.352e-06`. The file-ceiling ratio `0.909091` closes as `((gamma+gamma^2)*(1-alpha*gamma^3))*(1-alpha*pi^-5)`, gap `3.69578e-06`. The two unit-interval dressings drop below 116 values, so the positive dressing names them. Each anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. The thermionic row delivers less electricity than the thermal plant. This score adds no joules. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
+
+## Fission filed
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_filed
+```
+
+The command writes `runs/production/fission_filed.md`. The round-file margin `0.00357143` closes as `(((phi^-6*gamma^5)*(1+alpha*e^-4))*(1+alpha*e^-5))*(1-alpha*pi^-6)`, gap `2.68784e-06`. The cold-over-hot fraction `0.553571` meets helium on both `e^-6` and `pi^-5`. Both routes stay, and the operating fraction stays the cold temperature over the hot temperature. The separative rate `50` kWh per SWU closes as `(((e^4*G)*(1-alpha*pi^-3))*(1+alpha*pi^-5))*(1+alpha*pi^-6)`, gap `3.42376e-06`. One day over the filed year `0.00273973` stays wider after three factors and closes as `((((pi^-5*G^2)*(1-alpha*phi^-5))*(1-alpha*e^-5))*(1+alpha*pi^-6))*(1+alpha*pi^-6)`, gap `2.76439e-06`. Two days over the filed year is twice that share. Twenty hours over the filed year `0.00228311` closes as `(((e^-6*G)*(1+alpha*sqrt(gamma)))*(1+alpha*pi^-5))*(1+alpha*pi^-6)`, gap `2.70086e-06`. Four hours over twenty hours stays the exponent magnitude. The long offset over the short offset `2e+06` stays wider after three factors and closes as `((((pi^6*pi^6)*(1+alpha*e^5))*(1+alpha*gamma^-3))*(1+alpha*gamma^4))*(1+alpha*pi^-5)`, gap `2.75712e-06`. Equation (2) stays the witness. The tube-side outlet over inlet `0.973319` closes as `((phi-G^5)*(1+alpha*e^-5))*(1-alpha*pi^-6)`, gap `8.36457e-07`. The 140°F end over the 350°F entry `0.740635` closes as `(((gamma^6+G^4)*(1-alpha*e^-3))*(1+alpha*e^-6))*(1-alpha*pi^-6)`, gap `2.72006e-06`. The UFSAR prints no watt rate at the 350°F entry. Each anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. The catalog ceiling stays unrun. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
+
+## Fission reference
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_reference
+```
+
+The command writes `runs/production/fission_reference.md`. The Pu-239 kilogram over the U-235 kilogram is `0.983234` on the 200 MeV ledger. Its unit-interval dressing drops below 116 values. The positive dressing closes as `(((phi^-4+G^2)*(1-alpha*phi^-3))*(1+alpha*e^-5))*(1-alpha*pi^-6)`, gap `1.49126e-06`. The two rows use the same enrichment input. The fast delivery over the thermal delivery is `1.1918`, the kilogram ratio times the named efficiency step, and the fast return is that same product. The Surry core over the scored operating heat is `0.85371`. Its positive dressing closes as `(((sqrt(pi)-G)*(1-alpha*phi^-2))*(1-alpha*gamma^5))*(1+alpha*pi^-6)`, gap `2.28217e-06`. Each anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. The fast power density stays an estimate. This score adds no joules. The catalog ceiling stays unrun. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
+
+## Fission built
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_built
+```
+
+The command writes `runs/production/fission_built.md`. The plants-being-built efficiency `0.36` over the demonstrated efficiency `0.33` is `1.09091`. It closes as `((G*G^-2)*(1-alpha*pi^-2))*(1-alpha*pi^-5)`, gap `1.60279e-06`. The temperature Carnot `0.446429` over that page efficiency is `1.24008`. Three factors stay wider, and the fourth closes as `((((e^-3+G^-2)*(1-alpha*gamma^3))*(1+alpha*e^-4))*(1-alpha*pi^-5))*(1-alpha*pi^-6)`, gap `2.44975e-06`. Each anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. The efficiency differences stay the named efficiencies times one less than these steps. The catalog ceiling over `0.36` is the fast headroom `1.25`, so that number keeps the bounds expression. The demonstrated plant stays at `0.33`. The catalog ceiling stays unrun. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
+
+## Fission stamp
+
+From the project directory, Octave 11.3.0 runs `octave/fission_stamp.m` and writes `data/fission_stamp.txt`. Lean 4.31.0 accepts `lean/FissionStamp.lean` through `lake env` from the FSOT-2.1-Lean checkout. That file stays outside `lean_lib FSOT`.
+
+The Octave log recomputes each installed closing from the pinned seeds. Sixty-seven closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
+
 ## Tests
 
 ```bash

@@ -1,0 +1,79 @@
+helium 4.2343140683233769e-06
+base_pieces 60
+decay_one_second_fraction named gap 3.972917e-06 factors 1 count 116
+decay_two_day_limit named gap 7.672335e-07 factors 1 count 116
+decay_two_day_drop named gap 1.534566e-06 factors 1 count 110
+decay_one_second_limit named gap 2.583189e-06 factors 2 count 116
+decay_one_day_fraction named gap 3.344476e-06 factors 1 count 116
+decay_one_day_limit named gap 1.049801e-06 factors 2 count 116
+decay_two_day_fraction named gap 3.838234e-07 factors 1 count 116
+decay_one_day_drop named gap 4.144528e-08 factors 1 count 116
+heat_ratio named gap 8.102037e-08 factors 2 count 116
+removal_cap named gap 1.570582e-07 factors 2 count 116
+removal_duty named gap 1.589519e-06 factors 3 count 116
+removal_one_second named gap 2.443063e-06 factors 3 count 116
+removal_two_day named gap 3.000705e-06 factors 4 count 116
+service_service named gap 3.902275e-06 factors 3 count 116
+service_cooldown named gap 4.171217e-07 factors 2 count 116
+service_cross named gap 3.992231e-06 factors 3 count 116
+discharge named gap 4.232696e-06 factors 3 count 116
+reload_companion named gap 1.002472e-06 factors 1 count 116
+reload_separative named gap 4.174746e-06 factors 2 count 116
+reload_highly_enriched named gap 2.277915e-08 factors 2 count 116
+reload_energy_return named gap 1.104023e-06 factors 3 count 116
+steam_built named gap 2.355400e-07 factors 3 count 116
+steam_carnot named gap 1.382249e-06 factors 3 count 116
+steam_carnot_step named gap 9.215119e-07 factors 3 count 116
+margin_balance named gap 2.750974e-06 factors 3 count 116
+margin_fragment named gap 1.163999e-06 factors 2 count 116
+margin_uranium named gap 5.315342e-07 factors 3 count 116
+margin_plutonium named gap 2.182809e-06 factors 2 count 116
+margin_uranium_233 named gap 1.045505e-06 factors 3 count 116
+bounds_ceiling unrun gap 3.706033e-06 factors 2 count 116
+bounds_headroom named gap 2.574874e-06 factors 1 count 116
+bounds_fast_efficiency named gap 3.334050e-06 factors 3 count 116
+bounds_fast_ceiling named gap 8.757497e-07 factors 3 count 116
+bounds_fast_headroom named gap 3.789231e-06 factors 2 count 116
+bounds_small_class named gap 2.146638e-06 factors 2 count 116
+bounds_late_band named gap 5.262838e-07 factors 3 count 116
+bounds_thermal_return named gap 1.430328e-06 factors 3 count 116
+bounds_fast_return named gap 2.625304e-07 factors 3 count 116
+bounds_efficiency_step named gap 3.157451e-07 factors 3 count 116
+stack_atomic unrun gap 1.191059e-06 factors 2 count 116
+stack_burnup unrun gap 3.533658e-06 factors 1 count 116
+stack_stack unrun gap 8.522937e-07 factors 2 count 116
+stack_higher unrun gap 1.889675e-06 factors 4 count 116
+stack_electric unrun gap 2.451450e-06 factors 4 count 116
+stack_enrichment named gap 3.961442e-06 factors 2 count 116
+fit_weight named gap 1.320672e-06 factors 2 count 116
+fit_exponent named gap 2.966090e-06 factors 4 count 116
+condenser_one_second named gap 2.422349e-06 factors 2 count 116
+condenser_one_day named gap 1.556627e-07 factors 3 count 116
+condenser_two_day named gap 4.096210e-06 factors 2 count 116
+condenser_four_hour named gap 2.496628e-06 factors 1 count 116
+condenser_twenty_hour named gap 1.246786e-06 factors 2 count 116
+condenser_linear_scale named gap 2.096420e-06 factors 3 count 116
+thermionic_delivered named gap 2.585043e-06 factors 3 count 116
+thermionic_enrichment_return named gap 3.083089e-06 factors 2 count 116
+thermionic_headroom named gap 1.351996e-06 factors 1 count 116
+thermionic_ceiling_ratio named gap 3.695780e-06 factors 2 count 116
+filed_margin named gap 2.687837e-06 factors 3 count 116
+filed_rate named gap 3.423759e-06 factors 3 count 116
+filed_day_share named gap 2.764389e-06 factors 4 count 116
+filed_cooldown_share named gap 2.700863e-06 factors 3 count 116
+filed_offset_ratio named gap 2.757118e-06 factors 4 count 116
+filed_tube_ratio named gap 8.364568e-07 factors 2 count 116
+filed_cooldown_ratio named gap 2.720056e-06 factors 3 count 116
+reference_kilogram named gap 1.491263e-06 factors 3 count 116
+reference_core_ratio named gap 2.282174e-06 factors 3 count 116
+built_built_step named gap 1.602786e-06 factors 2 count 116
+built_carnot_step named gap 2.449745e-06 factors 4 count 116
+removal_one_day_pair held e 2.578493e-06 pi 3.179321e-06
+margin_proportion_pair held e 2.560388e-06 pi 3.197188e-06
+stack_fraction_pair held e 1.987097e-06 pi 3.770713e-06
+filed_rejected held e 3.283777e-06 pi 2.474041e-06
+year_share miss gap 5.032548e-06
+closes 68
+pairs 4
+miss 1
+fails 0
