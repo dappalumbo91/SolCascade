@@ -15,6 +15,9 @@ stamp. The tails percent and the tails fraction are installed closings. The
 steam-share quotients and the electricity gains are rationals of the named
 steps. The operating feed quotients are installed closings. The comparison
 column's feed multiple is a rational of the printed masses and stays unrun.
+The file ledger quantum is an installed closing. The operating-column
+remainder and the cooling-page extra heat are rationals of the named scores.
+The 55 GWd/t step and the 70 GWd/t step stay unrun.
 The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay
 unrun. Domain scalars stay out of the joules.
 -/
@@ -155,6 +158,36 @@ theorem feed_compare : (163 : ℚ) * 20 / 337 = 3260 / 337 := by norm_num
 
 theorem feed_compare_order : (3260 : ℚ) / 337 > 2110 / 243 := by norm_num
 
+theorem column_swu_year : (182000 : ℚ) * 1000 / 8760 = 4550000 / 219 := by norm_num
+
+theorem column_product : (243 : ℚ) / 2110 * (2110 / 243) = 1 := by norm_num
+
+theorem column_tails : (1 : ℚ) - 243 / 2110 = 1867 / 2110 := by norm_num
+
+theorem column_swu_natural : (1820 : ℚ) / 243 * 1000 / (2110 / 243) = 182000 / 211 := by norm_num
+
+theorem column_enriched : (5275 : ℚ) / 219 / (2110 / 243) = 405 / 146 := by norm_num
+
+theorem column_fissile :
+    ((45 : ℚ) / 1000 - (22 : ℚ) / 10000) / (2110 / 243) = 26001 / 5275000 := by
+  norm_num
+
+theorem column_cap_step : (55 : ℚ) / 45 = 11 / 9 := by norm_num
+
+theorem column_cap_keeps_built : (60 : ℚ) / 55 = 12 / 11 := by norm_num
+
+theorem column_compare_product : (337 : ℚ) / 3260 * (3260 / 337) = 1 := by norm_num
+
+theorem column_sighted_step : (70 : ℚ) / 45 = 14 / 9 := by norm_num
+
+theorem reject_ratio :
+    (12 : ℚ) / 11 * (((1 : ℚ) - 33 / 100) / ((1 : ℚ) - 9 / 25)) = 201 / 176 := by
+  norm_num
+
+theorem reject_extra : (201 : ℚ) / 176 - 1 = 25 / 176 := by norm_num
+
+theorem reject_over_gain : (25 : ℚ) / 176 / (1 / 11) = 25 / 16 := by norm_num
+
 /-- Octave discharges one closing string per installed unique match. -/
 def installedClosings : List String := [
   "(phi^-6/sqrt(G))*(1-alpha*e^-4)",
@@ -234,10 +267,11 @@ def installedClosings : List String := [
   "((pi^-3+G^5)*(1-alpha*pi^-3))*(1+alpha*e^-5)",
   "((sqrt(e)-G^3)*(1+alpha*pi^-3))*(1-alpha*pi^-6)",
   "(((gamma*gamma)*(1-alpha*e^-2))*(1+alpha*pi^-4))*(1+alpha*pi^-6)",
-  "((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)"
+  "((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)",
+  "((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)"
 ]
 
-theorem installed_closing_count : installedClosings.length = 78 := rfl
+theorem installed_closing_count : installedClosings.length = 79 := rfl
 
 /-- Both routes stay. The stamp does not choose. -/
 def heldRoutes : List (String × String × String) := [

@@ -736,7 +736,7 @@ The command writes `runs/production/fission_built.md`. The plants-being-built ef
 
 From the project directory, Octave 11.3.0 runs `octave/fission_stamp.m` and writes `data/fission_stamp.txt`. Lean 4.31.0 accepts `lean/FissionStamp.lean` through `lake env` from the FSOT-2.1-Lean checkout. That file stays outside `lean_lib FSOT`.
 
-The Octave log recomputes each installed closing from the pinned seeds. Seventy-seven closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The tails percent and the tails fraction are installed closes. The steam-share quotients and the electricity gains are proved rationals of the named steps. The operating feed quotients are installed closes. The comparison column's feed multiple is a rational of the printed masses and stays unrun. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
+The Octave log recomputes each installed closing from the pinned seeds. Seventy-eight closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The tails percent and the tails fraction are installed closes. The steam-share quotients and the electricity gains are proved rationals of the named steps. The operating feed quotients are installed closes. The file ledger quantum is an installed close. The operating-column remainder and the cooling-page extra heat are rationals of the named scores. The comparison column's feed multiple is a rational of the printed masses and stays unrun. The 55 GWd/t step and the 70 GWd/t step stay unrun. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
 
 ## Fission tails
 
@@ -777,6 +777,36 @@ py -3.14 -m solcascade.production.fission_feed
 ```
 
 The command writes `runs/production/fission_feed.md`. The operating column spends `211` t of natural uranium on `24.3` t of enriched uranium. That feed multiple is `8.68313`, the rational `2110/243`. It closes as `(((pi^2-G^-2)*(1+alpha*phi^-5))*(1-alpha*pi^-5))*(1-alpha*pi^-6)`, gap `1.00158e-06`. Natural uranium over the nameplate year is `24.0868` t per terawatt-hour, the rational `5275/219`, and the page rounds that quotient to 24. The uranium shares of the printed concentrate, hexafluoride, enriched hexafluoride, and dioxide are `211/249`, `211/312`, `243/359`, and `81/92`. The annual reload over the `73` t core is `243/730`, under the burnup gain. The prose one-third stays approximate. The 18-month reload is half that core, so it keeps the fast ceiling. The transuranic share of the `27.6` t used fuel is `7/690`. The printed 26 t uranium oxide does not close that row. The comparison column, `163` t for `16.85` t at the fabrication cap and `65` GWd/t, has feed multiple `3260/337` and stays unrun. The plants-being-built efficiency leaves the operating masses in place. This score adds no joules. The published stamp records these closes. The published stamp records the comparison multiple as a rational of the printed masses. The checked-in schedule is not rewritten.
+
+## Fission column
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_column
+```
+
+The command writes `runs/production/fission_column.md`. The operating column leaves no further free quotient. Separative work over the nameplate year is `20776.3` SWU per terawatt-hour, the rational `4550000/219`. That quotient is the named separative work per kilogram times the enriched kilograms in that terawatt-hour, so it keeps the reload score and the feed score. The product share is `243/2110`, the reciprocal of the feed multiple. The tails stream is `1867/2110`, one minus that share, and the page prints no tails mass. Separative work per tonne of natural uranium is `182000/211` and keeps those same scores. The fissile part of the natural uranium is `26001/5275000`, and the prose 0.49 percent stays that round. The page's 55 GWd/t burn-up is `11/9` of the operating discharge and stays unrun on the fabrication cap. Sixty over that 55 stays the named built step `12/11`. The page's 70 GWd/t burn-up states 6 percent enrichment and stays unrun. The comparison product share is `337/3260` and stays unrun. This score adds no joules. The published stamp records these quotients as rationals of the named scores. The checked-in schedule is not rewritten.
+
+## Fission reject
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_reject
+```
+
+The command writes `runs/production/fission_reject.md`. The cooling page states that a plant at 33 percent dumps about 14 percent more heat than a plant at 36 percent. The demonstrated dump stays `7.30909` MJ per kilowatt-hour and the built dump stays `6.4` MJ. The demonstrated plant dumps `1.14205` times that built dump, the rational `201/176`, which keeps the named built step `1.09091`. The extra heat is `0.142045`, the rational `25/176`, and it is `1.5625` times the published electricity gain, the rational `25/16`. The page's about 14 percent stays that round. The temperature Carnot stays the bound. The tower penalty, the fan share, and the evaporative figure stay the page's range and bound. This score adds no joules. The published stamp records these quotients as rationals of the named steps. The checked-in schedule is not rewritten.
+
+## Fission quantum
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_quantum
+```
+
+The command writes `runs/production/fission_quantum.md`. The eight pinned wave rows keep their own targets. None of them carries the file ledger of `200` MeV, and the channel search stays closed. The positive five-atom nearest is `e^2*gamma^-6` at `199.784`, gap `0.0010809`. One factor stays wider, `(e^2*gamma^-6)*(1+alpha*phi^-4)` at gap `1.73855e-05`. The closing value is `((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)` at `200`, gap `7.02539e-07`. One dressing of that anchor meets the helium match. The anchor has `116` dressings, median spacing `0.000511364`. The closing value agrees with `200` at six figures. This expression is not a wave row. The catalog density stays on the 200 MeV ledger. The fragment share stays the round split of that ledger. This score adds no joules. The published stamp records this close. The checked-in schedule is not rewritten.
 
 ## Tests
 

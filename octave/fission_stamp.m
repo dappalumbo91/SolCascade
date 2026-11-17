@@ -3,6 +3,7 @@
 % A unique close meets the helium quotient match, and the next dressing stays wider.
 % The four held pairs keep both routes.
 % The four-hour year share stays outside that match.
+% The file ledger quantum is an installed close.
 % The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun.
 % Domain scalars stay out of the joules.
 % Not part of lean_lib FSOT.
@@ -110,12 +111,13 @@ fails = check_close(fid, fails, S, base_names, base_values, helium, 'feed_enrich
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'feed_oxide', 0.88043478260869568, 'positive', 116, false, {'(sqrt(e)-G^3)*(1+alpha*pi^-3)' '((sqrt(e)-G^3)*(1+alpha*pi^-3))*(1-alpha*pi^-6)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'feed_core', 0.33287671232876714, 'positive', 116, false, {'(gamma*gamma)*(1-alpha*e^-2)' '((gamma*gamma)*(1-alpha*e^-2))*(1+alpha*pi^-4)' '(((gamma*gamma)*(1-alpha*e^-2))*(1+alpha*pi^-4))*(1+alpha*pi^-6)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'feed_transuranic', 0.010144927536231883, 'unit', 116, false, {'(pi*pi^-5)*(1-alpha*phi)' '((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)'});
+fails = check_close(fid, fails, S, base_names, base_values, helium, 'ledger_quantum', 200, 'positive', 116, false, {'(e^2*gamma^-6)*(1+alpha*phi^-4)' '((e^2*gamma^-6)*(1+alpha*phi^-4))*(1+alpha*e^-6)'});
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'removal_one_day_pair', 1.7697019567375738, 'positive', '(sqrt(pi)-e^-6)*(1-alpha*e^-4)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*e^-6)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'margin_proportion_pair', 0.0027000000000000001, 'unit', '((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*e^-6)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'stack_fraction_pair', 0.044999999999999998, 'unit', '((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*e^-6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'filed_rejected', 0.5535714285714286, 'positive', '((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*e^-6)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*pi^-5)');
 fails = check_miss(fid, fails, S, base_names, base_values, helium, 0.00045662100456621003, {'(pi^-5*e^-2)*(1+alpha*phi^3)' '((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3)' '(((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4)' '((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6)'});
-fprintf(fid, 'closes %d\n', 78);
+fprintf(fid, 'closes %d\n', 79);
 fprintf(fid, 'pairs %d\n', 4);
 fprintf(fid, 'miss 1\n');
 fprintf(fid, 'fails %d\n', fails);

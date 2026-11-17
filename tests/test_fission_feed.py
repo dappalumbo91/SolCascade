@@ -220,7 +220,7 @@ def test_report_keeps_the_operating_column(report):
     assert "fission_feed" not in package
     assert "import" not in package
     lean = (project_root() / "lean" / "FissionStamp.lean").read_text(encoding="utf-8")
-    assert "installedClosings.length = 78" in lean
+    assert "installedClosings.length = 79" in lean
     assert "theorem feed_multiple" in lean
     assert "theorem feed_per_twh" in lean
     assert "theorem feed_concentrate" in lean
@@ -235,4 +235,4 @@ def test_report_keeps_the_operating_column(report):
     assert "((pi*pi^-5)*(1-alpha*phi))*(1+alpha*e^-6)" in lean
     assert "fission_feed" not in lean
     log = (project_root() / "data" / "fission_stamp.txt").read_text(encoding="utf-8").splitlines()
-    assert log[-4:] == ["closes 78", "pairs 4", "miss 1", "fails 0"]
+    assert log[-4:] == ["closes 79", "pairs 4", "miss 1", "fails 0"]
