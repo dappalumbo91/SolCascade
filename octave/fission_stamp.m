@@ -100,12 +100,14 @@ fails = check_close(fid, fails, S, base_names, base_values, helium, 'reference_k
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'reference_core_ratio', 0.85371000000000008, 'positive', 116, false, {'(sqrt(pi)-G)*(1-alpha*phi^-2)' '((sqrt(pi)-G)*(1-alpha*phi^-2))*(1-alpha*gamma^5)' '(((sqrt(pi)-G)*(1-alpha*phi^-2))*(1-alpha*gamma^5))*(1+alpha*pi^-6)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'built_built_step', 1.0909090909090908, 'positive', 116, false, {'(G*G^-2)*(1-alpha*pi^-2)' '((G*G^-2)*(1-alpha*pi^-2))*(1-alpha*pi^-5)'});
 fails = check_close(fid, fails, S, base_names, base_values, helium, 'built_carnot_step', 1.2400793650793651, 'positive', 116, false, {'(e^-3+G^-2)*(1-alpha*gamma^3)' '((e^-3+G^-2)*(1-alpha*gamma^3))*(1+alpha*e^-4)' '(((e^-3+G^-2)*(1-alpha*gamma^3))*(1+alpha*e^-4))*(1-alpha*pi^-5)' '((((e^-3+G^-2)*(1-alpha*gamma^3))*(1+alpha*e^-4))*(1-alpha*pi^-5))*(1-alpha*pi^-6)'});
+fails = check_close(fid, fails, S, base_names, base_values, helium, 'tails_percent', 0.22, 'positive', 116, false, {'(phi^-2*gamma)*(1-alpha*gamma^2)' '((phi^-2*gamma)*(1-alpha*gamma^2))*(1+alpha*gamma^6)'});
+fails = check_close(fid, fails, S, base_names, base_values, helium, 'tails_fraction', 0.0022, 'unit', 116, false, {'(pi^-5-pi^-6)*(1-alpha*G^-6)' '((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5)' '(((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)'});
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'removal_one_day_pair', 1.7697019567375738, 'positive', '(sqrt(pi)-e^-6)*(1-alpha*e^-4)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*e^-6)', '((sqrt(pi)-e^-6)*(1-alpha*e^-4))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'margin_proportion_pair', 0.0027000000000000001, 'unit', '((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*e^-6)', '(((e^-6/G)*(1-alpha*gamma^2))*(1+alpha*e^-4))*(1+alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'stack_fraction_pair', 0.044999999999999998, 'unit', '((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*e^-6)', '(((e^-2*gamma^2)*(1-alpha*phi^-3))*(1-alpha*gamma^6))*(1-alpha*pi^-5)');
 fails = check_pair(fid, fails, S, base_names, base_values, helium, 'filed_rejected', 0.5535714285714286, 'positive', '((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*e^-6)', '(((gamma*sqrt(G))*(1+alpha*phi^-3))*(1+alpha*e^-3))*(1-alpha*pi^-5)');
 fails = check_miss(fid, fails, S, base_names, base_values, helium, 0.00045662100456621003, {'(pi^-5*e^-2)*(1+alpha*phi^3)' '((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3)' '(((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4)' '((((pi^-5*e^-2)*(1+alpha*phi^3))*(1+alpha*gamma^3))*(1+alpha*e^-4))*(1+alpha*pi^-6)'});
-fprintf(fid, 'closes %d\n', 68);
+fprintf(fid, 'closes %d\n', 70);
 fprintf(fid, 'pairs %d\n', 4);
 fprintf(fid, 'miss 1\n');
 fprintf(fid, 'fails %d\n', fails);

@@ -736,7 +736,37 @@ The command writes `runs/production/fission_built.md`. The plants-being-built ef
 
 From the project directory, Octave 11.3.0 runs `octave/fission_stamp.m` and writes `data/fission_stamp.txt`. Lean 4.31.0 accepts `lean/FissionStamp.lean` through `lake env` from the FSOT-2.1-Lean checkout. That file stays outside `lean_lib FSOT`.
 
-The Octave log recomputes each installed closing from the pinned seeds. Sixty-seven closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
+The Octave log recomputes each installed closing from the pinned seeds. Sixty-nine closes keep 116 dressings and median spacing `0.000511364`. The recorded two-day drop keeps 110 unit dressings. One dressing of each closing meets the helium quotient match, and the next dressing stays wider. The four held pairs keep both routes. The four-hour year share stays outside the helium match. The tails percent and the tails fraction are installed closes. The steam-share quotients and the electricity gains are proved rationals of the named steps. The demonstrated efficiency is `33/100`. The plants-being-built efficiency is `9/25`. The Carnot bound is `1 - 310/560`. The fabrication cap is `1/20`. The catalog ceiling, the 6.5 percent page, and the 60 GWd/t stack stay unrun. Domain scalars stay out of the joules. The checked-in schedule is not rewritten.
+
+## Fission tails
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_tails
+```
+
+The command writes `runs/production/fission_tails.md`. The overview's 1000 MWe example assumes 0.22 percent tails. The tails percent `0.22` has 115 unit dressings, so the positive dressing names it. It closes as `((phi^-2*gamma)*(1-alpha*gamma^2))*(1+alpha*gamma^6)`, gap `3.50354e-07`. The tails fraction `0.0022` keeps 116 unit dressings. It closes as `(((pi^-5-pi^-6)*(1-alpha*G^-6))*(1-alpha*pi^-5))*(1-alpha*pi^-6)`, gap `3.62053e-06`. Each closing anchor has `116` dressings, median spacing `0.000511364`. One dressing of each closing anchor meets the helium match. The percent agrees at six figures. The fraction's six-figure print stays `0.00220001`. The enriched percent stays the stack score. The enriched fraction stays the held pair. The fabrication page's about 4.8 percent stays approximate. The published stamp records these two closes. This score adds no joules. The catalog ceiling stays unrun. The 60 GWd/t stack stays unrun. The checked-in schedule is not rewritten.
+
+## Fission share
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_share
+```
+
+The command writes `runs/production/fission_share.md`. The target inside the open interval is the plants-being-built efficiency `0.36`. The steam score names it as `(((pi^-3*phi^5)*(1+alpha*G))*(1-alpha*e^-4))*(1-alpha*e^-5)`, gap `2.3554e-07`. On the same heat the electricity ratio is the named built step `1.09091`. That figure keeps `0.8064` of the temperature Carnot, the reciprocal of the named Carnot step, the rational `504/625`. The demonstrated plant keeps `0.7392`, the rational `462/625`. Moving from `0.33` to `0.36` closes `0.257669` of the open interval, the rational `42/163`. That closed share keeps the two named steps. The remaining share is `0.742331`, the rational `121/163`. The temperature Carnot stays the bound. The fast efficiency stays the bounds score. The catalog ceiling stays unrun. This score adds no joules. The published stamp records these quotients as rationals of the named steps. The checked-in schedule is not rewritten.
+
+## Fission lever
+
+From the project directory:
+
+```bash
+py -3.14 -m solcascade.production.fission_lever
+```
+
+The command writes `runs/production/fission_lever.md`. The published gain from `0.33` to `0.36` is `0.0909091`, one less than the named built step, the rational `1/11`. The remaining gain from `0.36` up to the temperature Carnot is `0.240079`, the rational `121/504`. That remaining gain is `2.64087` times the published gain, the rational `1331/504`. The temperature Carnot stays the bound. The 60 GWd/t burnup gain is `0.333333`, the rational `1/3`, and it is `3.66667` times the published gain, the rational `11/3`. The atomic percent stays above the fabrication cap, so the 60 GWd/t stack stays unrun. The filed companion is `0.988644`. The same reload at `0.36` stands at `1.07852` of the nameplate year, the filed companion times the named built step. The filed reload stays `24.3` t. This score adds no joules. The published stamp records these gains as rationals of the named steps. The checked-in schedule is not rewritten.
 
 ## Tests
 
